@@ -9,19 +9,27 @@ You must have permissions to do so.<br>
 
 
 Move
+
 ```
 go rid_<room name string from there>
 ```
-check `blakston.khd` for the room name values<br>
+
+check `blakston.khd` for the room name values
 
 [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository.
+
 ---
+
 Populate map of current room
+
 ```
 show map
 ```
+
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/e19a9613-5744-44c1-a0f9-0933d18cde16)
+
 ---
+
 Get spells or skills
 ```
 dm get spells
@@ -29,17 +37,23 @@ dm get spells
 ```
 dm get skills
 ```
+
 ---
+
 Boost stats
 ```
 dm boost stats
 ```
+
 ---
+
 Create monsters
 ```
 dm create [monster name]
 ```
+
 ---
+
 ## Time
 
 Set game day year day hour etc
@@ -73,16 +87,21 @@ Refresh the state of an object
 send o [object id] somethingchanged
 ```
 
+---
+
 Create Item
 ```
 dm get item [item name]
 ```
 
+---
+
+
 Create Special Items
 ```
-DM create itematt <this is where blinder or paralyzer ect go>
+DM create itematt <itematt>
 ```
->EXAMPLE: "DM create itematt cold"
+EXAMPLE: "DM create itematt cold"
 
 itematt word | description
 |:-|:-|
@@ -90,8 +109,8 @@ blinder | blind
 paralyzer | hold
 vamper | vamp weap
 twister | GMT
-Transcendant | soft white light
-Bonker | bonk weap
+transcendant | soft white light
+bonker | bonk weap
 expert | random justice weaponon, can be weak or good, its random
 spellcasters "name" | makes weapon special, example 'spellcasters acid'
 durable | more durable
