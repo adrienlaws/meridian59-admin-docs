@@ -281,12 +281,14 @@ send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>
 ```
 School Numbers:
 |School | Number|
--|-Shally 1
+|:-|:-|
+Shally 1
 Qor|2
 Kranny|3
 Faren|4
 Riija|5
 Jala|6
+
 
 Infinite Inventory and stomach:
 ```
