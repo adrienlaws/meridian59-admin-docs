@@ -2,7 +2,8 @@
 Meridian 59 Administration Commands
 
 ## Basics
-`shift+4` opens the administration console
+`shift+4` opens the administration console from the Meridian 59 client.<br>
+You must have permissions to do so.<br>
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/50a1ce77-817b-4368-bc75-03e8a630072a)
 
 
@@ -11,13 +12,14 @@ Move
 go rid_<room name string from there>
 ```
 check `blakston.khd` for the room name values
-
-[blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository
-
+[blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository.
+---
 populate map of current room
 ```
 show map
 ```
+![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/e19a9613-5744-44c1-a0f9-0933d18cde16)
+
 
 Get spells / skills
 ```
