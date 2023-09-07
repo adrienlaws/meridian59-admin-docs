@@ -1,7 +1,7 @@
 # meridian59-admin-docs
 Meridian 59 Administration Commands
 
-## Basics
+### Basics
 
 `shift+4` opens the administration console from the Meridian 59 client.<br>
 You must have permissions to do so.<br>
@@ -20,7 +20,7 @@ send object [player object number] teleportto rid int [room id]
 
 check `blakston.khd` for the room id values
 
-[blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository.
+Link to [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository.
 
 ---
 
