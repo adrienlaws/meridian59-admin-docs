@@ -12,14 +12,14 @@ You must have permissions to do so.<br>
 Move
 
 ```
-go rid_[room name string]
+go rid_<room_name_string>
 ```
 Example: `go rid_tos`
 
 Or use this command in the administration console
 
 ```
-send object [player object number] teleportto rid int [room id]
+send object <player object number> teleportto rid int <room id>
 ```
 Example: `go rid_tos`
 
