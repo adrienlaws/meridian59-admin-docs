@@ -1,7 +1,9 @@
 # meridian59-admin-docs
 Meridian 59 Administration Commands
 
-### Basics
+
+[https://github.com/adrienlaws/meridian59-admin-docs/edit/main/README.md#basics
+](url)### Basics
 
 `shift+4` opens the administration console from the Meridian 59 client.<br>
 You must have permissions to do so.<br>
