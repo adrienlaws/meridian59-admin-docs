@@ -306,35 +306,35 @@ Give Player Permanant HP Boost:
 ```
 send object <playerobject#> GainBaseMaxHealth amount int <HPamount>
 ```
-Permanantly Bond Player to a Mana Node:
+Permanently Bond Player to a Mana Node:
 ```
 send o <mananode#> meld who o <playerobject#>
 ```
-Permanantly Bond Player to Every Mana Node:
+Permanently Bond Player to Every Mana Node:
 ```
 send c mananode meld who o <playerobject#>
 ```
-Boost a Players Might Permanatly:
+Boost a Players Might Permanently:
 ```
 send o <playerobject#> AddMight points int <#ofpoints>
 ```
-Boost a Players Intellect Permanatly:
+Boost a Players Intellect Permanently:
 ```
 send o <playerobject#> AddIntellect points int <#ofpoints>
 ```
-Boost a Players Stamina Permanatly:
+Boost a Players Stamina Permanently:
 ```
 send o <playerobject#> AddStamina points int <#ofpoints>
 ```
-Boost a Players Aim Permanatly:
+Boost a Players Aim Permanently:
 ```
 send o <playerobject#> AddAim points int <#ofpoints>
 ```
-Boost a Players Agility Permanatly:
+Boost a Players Agility Permanently:
 ```
 send o <playerobject#> AddAgility points int <#ofpoints>
 ```
-Boost a Players Mysticism Permanatly:
+Boost a Players Mysticism Permanently:
 ```
 send o <playerobject#> AddMysticism points int <#ofpoints>
 ```
