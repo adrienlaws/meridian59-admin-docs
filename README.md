@@ -210,8 +210,10 @@ DM shadow
 ```
 
 ### Reference
-Admin_Name_Colours.pdf
+- Admin_Name_Colours.pdf
 
+#### not implemented or documented
+- Auto-Updates.pdf
 
 ### Attribution
 - Haven
