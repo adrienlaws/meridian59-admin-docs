@@ -123,7 +123,7 @@ twister | GMT
 transcendant | soft white light
 bonker | bonk weap
 expert | random justice weaponon, can be weak or good, its random
-spellcasters "name" | makes weapon special, example 'spellcasters acid'
+spellcasters <name> | makes weapon special, example 'spellcasters acid'
 durable | more durable
 duke | duke
 cold | icy
