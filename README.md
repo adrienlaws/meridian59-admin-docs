@@ -209,15 +209,25 @@ DM troll
 DM shadow
 ```
 ### Character Building
+
 Single Character Building
 NOTE: Nearly all Send o commands can be done globally as well with a Send c user instead and vice
 versa, so just experiment with other things that aren't listed here.
+
 Single Skills:
+```
 send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here
+```
+
 Single Spells:
+```
 send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here
+```
+
 Give Player Defined Weaponcraft Skills at certain level and %:
- send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>
+```
+send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>
+```
 Give Player Defined Spell School at certain level and %:
 send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>
 Give Player all Weaponcraft Skills:
