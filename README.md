@@ -211,3 +211,10 @@ DM shadow
 
 ### Reference
 Admin_Name_Colours.pdf
+
+
+### Attribution
+- Haven
+- Diggie
+- Others (please let me know I will add you)
+- [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
