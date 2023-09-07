@@ -2,7 +2,7 @@
 Meridian 59 Administration Commands
 
 ### Contents
-- [basics](#basics)
+- [Basics](#Basics)
 
 ### Basics
 
