@@ -208,9 +208,108 @@ DM troll
 ```
 DM shadow
 ```
+### Character Building
+Single Character Building
+NOTE: Nearly all Send o commands can be done globally as well with a Send c user instead and vice
+versa, so just experiment with other things that aren't listed here.
+Single Skills:
+send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here
+Single Spells:
+send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here
+Give Player Defined Weaponcraft Skills at certain level and %:
+ send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>
+Give Player Defined Spell School at certain level and %:
+send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>
+Give Player all Weaponcraft Skills:
+send o <playerobject#> giveplayerallskills
+Give Player all Regular Spells:
+send o <playerobject#> giveplayerallspells
+Give Player Single Spell Schools:
+ send o <playerobject#> giveplayerallspells school int SS_<schoolname>
+Remove all spells/skills:
+send o <playerobj#> removeallskills
+send o <playerobj#> removeallspells
+Remove Single Spells:
+send o <playerobj#> RemoveSpell num int <spell#> isDM int <1 or 0>
+(The isDM int <1 or 0> part isn't always required)
+Remove Single Skills:
+send o <playerobj#> RemoveSkill num int <skill#>
+Remove Inaccesable Spells:
+send o <playerobj#> RemoveInaccessibleSpells
+Clear all spells:
+send o <playerobj#> ClearSpellList
+Clear single schools:
+These don't seem to work
+send o <PlayerObj#> StripSpellsOfSchool school int <School#>
+Add to spell to other schools:
+send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>
+School Numbers:
+Shally 1
+Qor 2
+Kranny 3
+Faren 4
+Riija 5
+Jala 6
+Infinite Inventory and stomach:
+set object <PlayerObj#> piBulk_hold $ 0
+set object <PlayerObj#> piWeight_hold $ 0
+set object <PlayerObj#> piStomach $ 0
+Bio Inscription:
+send o <playerobject#> sethonorstring string quote <message>
+Give Player Permanant HP Boost:
+send object <playerobject#> GainBaseMaxHealth amount int <HPamount>
+Permanantly Bond Player to a Mana Node:
+send o <mananode#> meld who o <playerobject#>
+Permanantly Bond Player to Every Mana Node:
+send c mananode meld who o <playerobject#>
+Boost a Players Might Permanatly:
+send o <playerobject#> AddMight points int <#ofpoints>
+Boost a Players Intellect Permanatly:
+send o <playerobject#> AddIntellect points int <#ofpoints>
+Boost a Players Stamina Permanatly:
+send o <playerobject#> AddStamina points int <#ofpoints>
+Boost a Players Aim Permanatly:
+send o <playerobject#> AddAim points int <#ofpoints>
+Boost a Players Agility Permanatly:
+send o <playerobject#> AddAgility points int <#ofpoints>
+Boost a Players Mysticism Permanatly:
+send o <playerobject#> AddMysticism points int <#ofpoints>
+Give Penalties to a Log Off Ghost:
+send object <logoffobject#> InflictPenalties
+Global Character Building
+Give Every Player all Skills (even offline users) :
+send c user giveplayerallskills
+Give Every Player Single Skills (even offline users) :
+send c user adminsetskill num int <skill#> ability int <%ofskill>
+Give Every Player Single Spells (even offline users):
+ send c user adminsetspell num int <spell#> ability int <%ofspell>
+Bio Inscription for All Players (even offline users) :
+send c user sethonorstring string quote <message>
+Change everyones karma:
+send class <player#> addkarma amount <KarmaAmount>
+(set amount to $ 0 to make it nil)
+Rescue all players:
+send c user admingotosafety
+Give All Players a Temporary HP Boost:
+ send c player GainHealth amount int <#ofhps>
+Permanantly Bond Every Player to a Mana Node:
+send o <mananode#> meld who c user
+Permanantly Bond Every Player to Every Mana Node:
+send c mananode meld who c user
+Give All Players Mana Boost Semi-Permanant:
+send c user GainMana amount int <ManaAmount>
+(ao3/soth/node restores default mana)
+Boost All Players Vigor to 200 (works like eating something):
+ send c user EatSomething filling int 0 nutrition int 200
+Give Every Player Single Spell Schools (even offline users):
+ send o <playerobject#> giveplayerallspells school int SS_<schoolname>
+Give Every Player all Spells (even offline users) :
+send c user GivePlayerAllSpells level INT 6
+ (You can also put 7 to give the player the slitherbolt spell also)
 
 ### Reference
 - Admin_Name_Colours.pdf
+- Character_Building.pdf
 
 #### not implemented or documented
 - Auto-Updates.pdf
