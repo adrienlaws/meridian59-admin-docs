@@ -2,8 +2,7 @@
 Meridian 59 Administration Commands
 
 
-[https://github.com/adrienlaws/meridian59-admin-docs/edit/main/README.md#basics
-](url)### Basics
+### Basics
 
 `shift+4` opens the administration console from the Meridian 59 client.<br>
 You must have permissions to do so.<br>
@@ -143,3 +142,72 @@ Black (int 44)
 Dark Green (int 37)
 Crimson splash (int 42)
 
+### Admin Name Colors
+Green Bard/Admin Name:
+```
+set o <playerobj#> pbImmortal INT 2
+```
+
+or use the DM command:
+```
+DM Zandramas, in your infinite wisdom, please make me important.
+```
+---
+
+Yellow Game Creator Name:
+In the $ Menu type:
+create o creator
+<Copy the creators Object number it gives you>
+create resource <New Name>
+<Copy the Resource number it gives you>
+set o <creatorobject#> vrname resource <resource#>
+create account admin USERNAME PASSWORD
+(If you want to apply this to a new account, if not skip to the next step and use a different account #)
+<Copy the Account Number it gives you>
+set account o <account#> <creatorobject#>
+
+---
+
+Yellow Name Only Quick Disguses:
+```
+DM armor
+```
+```
+DM shrub
+```
+```
+DM tree
+```
+```
+DM ghost
+```
+```
+DM stool
+```
+```
+DM priestess
+```
+```
+DM ant
+```
+```
+DM red ant
+```
+```
+DM human
+```
+```
+DM cow
+```
+```
+DM spider
+```
+```
+DM troll
+```
+```
+DM shadow
+```
+
+### Reference
+Admin_Name_Colours.pdf
