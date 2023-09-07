@@ -14,7 +14,11 @@ Move
 go rid_<room name string from there>
 ```
 
-check `blakston.khd` for the room name values
+```
+send object [player object number] teleportto rid int [room id]
+```
+
+check `blakston.khd` for the room id values
 
 [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository.
 
