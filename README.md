@@ -83,7 +83,7 @@ DM create itematt <this is where blinder or paralyzer ect go>
 ```
 EXAMPLE: "DM create itematt cold"
 
-item | description
+itematt word | description
 |:-|:-|
 blinder | blind
 paralyzer | hold
