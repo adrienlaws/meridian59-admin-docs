@@ -280,9 +280,9 @@ Add to spell to other schools:
 send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>
 ```
 School Numbers:
-|School | Number|
+|School|Number|
 |:-|:-|
-Shally 1
+Shally |1|
 Qor|2
 Kranny|3
 Faren|4
