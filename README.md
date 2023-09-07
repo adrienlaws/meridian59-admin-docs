@@ -11,12 +11,16 @@ You must have permissions to do so.<br>
 Move
 
 ```
-go rid_<room name string from there>
+go rid_[room name string]
 ```
+Example: `go rid_tos`
+
+Or use this command in the administration console
 
 ```
 send object [player object number] teleportto rid int [room id]
 ```
+Example: `go rid_tos`
 
 check `blakston.khd` for the room id values
 
@@ -58,6 +62,13 @@ dm create [monster name]
 
 ---
 
+Refresh the state of an object
+```
+send o [object id] somethingchanged
+```
+
+---
+
 ## Time
 
 Set game day year day hour etc
@@ -85,11 +96,6 @@ set object 0 piDay INT 16
 | 12 Meridian days | 24 Earth hours | 
 | 1 Meridian year | 240 Meridian days |
 | 1 Meridian year | 20 Earth days |
-
-Refresh the state of an object
-```
-send o [object id] somethingchanged
-```
 
 ---
 
