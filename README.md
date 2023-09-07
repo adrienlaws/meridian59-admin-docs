@@ -2,7 +2,6 @@
 Meridian 59 Administration Commands
 
 ### Contents
-- [basics](https://github.com/adrienlaws/meridian59-admin-docs/edit/main/README.md#basics)
 - [basics](#basics)
 
 ### Basics
