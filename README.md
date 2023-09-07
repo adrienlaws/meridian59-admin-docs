@@ -409,6 +409,125 @@ send c user GivePlayerAllSpells level INT 6
 ```
 (You can also put 7 to give the player the slitherbolt spell also)
 
+
+### Creating Different Items
+Create Statues:
+First create a statue somewhere:
+```
+Create o statue
+```
+
+Then in the $ menu type:
+```
+show instance statue
+```
+Look for the last object number it shows then type:
+```
+show o <laststatueobject#>
+```
+Then the first thing you should edit is the Weapon and Shield lines to Nil.
+Otherwise if someone enters the room or you type reset then the room the statue is in will freeze up.
+Now you can edit the statues Toupee, Head, Eyes, Arms, etc to the same as whatever it is in the
+character you want the statue of same lines in the $ menu.
+After you've done that change the poOriginal line to the Character you want the statue to be of Object#
+Statue Editing Info and Poses
+
+Create Signs:
+First either Buy or Create a "Junk" class item that Pacal sells.
+Then edit the change the vrName and vrIcon lines to:
+sign_name_rsc and sign_icon_rsc
+Then in the $ menu type:
+```
+Create resource <sign description>
+```
+and then edit the vrDesc to the resource number you get.
+Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it
+won't disappear.
+Here's a list of different signs you can use on Junk Items:
+Normal Sign:
+sign_name_rsc
+sign_icon_rsc
+Raza Sign:
+sign_name_rsc
+sign_newbie_icon_rsc
+Assassin Game Sign:
+sign_name_rsc
+assassinsign_name_rsc
+(Not all Junk items that Pacal sells works with this always. Books and Glass Pendants seem to work
+good every time. Try changing the vrIcon line first)
+Create any item:
+Create o OrnamentalObject
+Then just set its vrName, Icon and Desc to any resource to make it look like that item.
+List of resources
+Create a simple Edge Exit List anywhere:
+Create a portal and make it go where you want then change it's icon to:
+admin_icon_blank
+This will make the portal invisible so it will look like an area edge exit.
+Create a Food Dispenser (feast hall object):
+create o fooddispenser
+send o <roomobject#> teleport what o <fooddispenserobject#>
+Now move it where you want with the move button and change the vrname, icon and desc to make it look
+like an item, once you have done that, set the poTemplate line to the object number of the item you want
+it to give out.
+Create Globe of Seeing:
+Globe you look in:
+create o viewpointglobe
+send o <roomobject#> teleport what o <ViewGlobeOobject#>
+(Put it in the room you want it in)
+Globe you see out of:
+Create o targetglobe
+send o <roomobject#> teleport what o <TargetGlobeObject#>
+Now move them to where you want and change the view globe targetglobe line to the targetglobe's object
+number.
+The piRange line determines how far away from the globe you can be to use it.
+(Viewing and Target globes Name, Icon and Desc lines can be changed, so you could set them up to
+look like another object and spy on rooms!)
+Delete items:
+Send o <ItemObj#> delete
+Make walking NPCs:
+To make an NPC walk is simple. First choose which NPC you want to enable walking on an then look at
+it's properties in the admin window.
+Scroll down until you see the line which says piBehavior. Changing the INT will determine how the NPC
+reacts.
+1 = Random Walking.
+2 = Enables you to attack, but the NPC won't move or attack you.
+3 = Makes it a standard, static NPC.
+4 = Lets you attack the NPC, but it will only fight back if you hit it.
+5 = Random Walking.
+6 = Unable to move, but will attack if you walk near it.
+7 = Makes it a standard, static NPC.
+8 = Turns the NPC into an enemy that follows and attacks you.
+9 = Makes the NPC follow you.
+10 = Attacks you if provoked, but doesn't move.
+That's a small selection of behavior types. If you want to mimic a certain monster behavior, just look at it
+in the admin window and copy the monsters behavior number to your NPC.
+An NPC that has proper walking graphics already made for it, is the Street Urchin. To get this, just type in
+the admin window:
+Create o TosUrchin
+and then;
+send o <RoomObjNumber> teleport what o <NewUrchinObjNumber>
+But any NPC can be made to move, look in the Default Class Name Reference for some NPC class
+names, or just if you can't find one you want in the list, just look at an NPC ingame through the admin
+window to find it's class name. You can also set the NPC's hit points to whatever you want so it stands a
+better chance of survival.
+Globe Numbers:
+When making new a globe, use these numbers to determine which type of globe it is:
+% newsgroup IDs
+ NID_GENERAL = 1 %% NID is currently unplaced anywhere.
+ NID_NEW_USERS = 2
+ NID_GAME = 3 %% guilds now use their RID_ numbers as
+ NID_JUSTICAR = 4
+ NID_ADVENTURE = 5 %% bard/actor only newsball
+ NID_ANNOUNCEMENTS = 9 %% their NIDs. Do not assign them their
+ NID_GUILD_CHARTER = 10 %% own NID.
+ NID_GODROOM = 14
+ NID_TOS_HALL = 20
+ NID_BAR_HALL = 21 %% Adventurer's Hall Newsballs
+ NID_JAS_HALL = 22
+ NID_COR_HALL = 23
+ NID_MAR_HALL = 24
+ NID_KOC_HALL = 24
+
 ### Reference
 - Admin_Name_Colours.pdf
 - Character_Building.pdf
