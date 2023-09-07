@@ -29,6 +29,11 @@ Link to [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862
 
 ---
 
+Go on a tour of all rooms
+```
+dm start tour
+```
+
 Populate map of current room
 
 ```
