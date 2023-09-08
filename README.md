@@ -77,6 +77,17 @@ dm create [monster name]
 
 ---
 
+Room Monster Rates
+Mob spawns have 3 controls
+
+   `piMonster_count_max` = 30 
+    `piInit_count_min` = 5 
+    `piInit_count_max` = 10
+    
+This means the room will have 5-10 mobs when u user enters it and will spawn up to 30
+
+---
+
 Refresh the state of an object
 ```
 send o [object id] somethingchanged
