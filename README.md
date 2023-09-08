@@ -3,6 +3,13 @@ Meridian 59 Administration Commands
 
 ### Contents
 - [Basics](#Basics)
+- Move
+  - teleport
+  - 
+- Create
+  - items
+  - character
+- time
 
 ### Basics
 
@@ -533,7 +540,20 @@ When making new a globe, use these numbers to determine which type of globe it i
 - Character_Building.pdf
 
 #### not implemented or documented
+- General_Admin_Commands.pdf
+- General_Char_Commands.pdf
+- Hair_Skin_Item_Coloring_Reference.pdf
+- Map_Numbers.pdf
+- New_Class_Creation.pdf
+- NPC_Info.pdf
+- Tips_and_Tricks.pdf
+- DM_Commands.pdf
+
+#### Probably not implementing here
 - Auto-Updates.pdf
+- Client_Editing.pdf
+- Creating_Different_Items.pdf
+- Editing_Things_via_Hex.pdf
 
 ### Attribution
 - Haven
