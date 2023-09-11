@@ -163,6 +163,9 @@ OUTPUT
 ```
 This means that the listnode contains only int 75 (the spawn rate % for `SpiderBaby`) and then ends since `rest` is set to `$ 0`
 
+![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/1ae82405-b6ab-41bd-96fd-9f50d14a0cd5)
+
+
 ## Time
 
 Set game day year day hour etc
