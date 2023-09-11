@@ -429,12 +429,11 @@ send c user GivePlayerAllSpells level INT 6
 
 
 ### Creating Different Items
-Create Statues:
+Create Statues:\
 First create a statue somewhere:
 ```
 Create o statue
 ```
-
 Then in the $ menu type:
 ```
 show instance statue
@@ -443,12 +442,12 @@ Look for the last object number it shows then type:
 ```
 show o <laststatueobject#>
 ```
-Then the first thing you should edit is the Weapon and Shield lines to Nil.
-Otherwise if someone enters the room or you type reset then the room the statue is in will freeze up.
+Then the first thing you should edit is the Weapon and Shield lines to Nil.\
+Otherwise if someone enters the room or you type reset then the room the statue is in will freeze up.\
 Now you can edit the statues Toupee, Head, Eyes, Arms, etc to the same as whatever it is in the
-character you want the statue of same lines in the $ menu.
+character you want the statue of same lines in the $ menu.\
 After you've done that change the poOriginal line to the Character you want the statue to be of Object#
-Statue Editing Info and Poses
+Statue Editing Info and Poses.
 
 Create Signs:
 First either Buy or Create a "Junk" class item that Pacal sells.
@@ -458,9 +457,9 @@ Then in the $ menu type:
 ```
 Create resource <sign description>
 ```
-and then edit the vrDesc to the resource number you get.
-Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it
-won't disappear.
+and then edit the vrDesc to the resource number you get.\
+Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it won't disappear.\
+
 Here's a list of different signs you can use on Junk Items:
 Normal Sign:
 ```
@@ -485,41 +484,66 @@ Assassin Game Sign:
 sign_name_rsc
 ```
 
+```
 assassinsign_name_rsc
-(Not all Junk items that Pacal sells works with this always. Books and Glass Pendants seem to work
-good every time. Try changing the vrIcon line first)
+```
+
+(Not all Junk items that Pacal sells works with this always.\
+Books and Glass Pendants seem to work good every time. Try changing the `vrIcon` line first)
+
 Create any item:\
 ```
 Create o OrnamentalObject
 ```
-Then just set its vrName, Icon and Desc to any resource to make it look like that item.\
+Then just set its `vrName`, `Icon` and `Desc` to any resource to make it look like that item.\
 
-List of resources
-Create a simple Edge Exit List anywhere:
+List of resources\
+
+Create a simple Edge Exit List anywhere:\
+
 Create a portal and make it go where you want then change it's icon to:
-admin_icon_blank
+`admin_icon_blank`
+
 This will make the portal invisible so it will look like an area edge exit.
+
 Create a Food Dispenser (feast hall object):
+```
 create o fooddispenser
+```
+```
 send o <roomobject#> teleport what o <fooddispenserobject#>
-Now move it where you want with the move button and change the vrname, icon and desc to make it look
-like an item, once you have done that, set the poTemplate line to the object number of the item you want
-it to give out.
-Create Globe of Seeing:
+```
+Now move it where you want with the move button and change the `vrname`, `icon` and `desc` to make it look like an item.
+Once you have done that, set the `poTemplate` line to the object number of the item you want it to give out.
+
+Create Globe of Seeing:\
 Globe you look in:
+```
 create o viewpointglobe
+```
+
+```
 send o <roomobject#> teleport what o <ViewGlobeOobject#>
+```
+
 (Put it in the room you want it in)
-Globe you see out of:
+
+Globe you see out of:\
+```
 Create o targetglobe
+```
+
+```
 send o <roomobject#> teleport what o <TargetGlobeObject#>
-Now move them to where you want and change the view globe targetglobe line to the targetglobe's object
-number.
-The piRange line determines how far away from the globe you can be to use it.
-(Viewing and Target globes Name, Icon and Desc lines can be changed, so you could set them up to
-look like another object and spy on rooms!)
+```
+Now move them to where you want and change the view globe targetglobe line to the targetglobe's object number.\
+The `piRange` line determines how far away from the globe you can be to use it.\
+(Viewing and Target globes Name, Icon and Desc lines can be changed, so you could set them up to look like another object and spy on rooms!)
+
 Delete items:
+```
 Send o <ItemObj#> delete
+```
 
 Make walking NPCs:
 
