@@ -463,11 +463,23 @@ Now drop the sign where you want and change the poOwner line to Nil so nobody ca
 won't disappear.
 Here's a list of different signs you can use on Junk Items:
 Normal Sign:
+```
 sign_name_rsc
+```
+
+```
 sign_icon_rsc
+```
+
 Raza Sign:
+```
 sign_name_rsc
+```
+
+```
 sign_newbie_icon_rsc
+```
+
 Assassin Game Sign:
 sign_name_rsc
 assassinsign_name_rsc
