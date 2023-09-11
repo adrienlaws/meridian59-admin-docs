@@ -1,8 +1,8 @@
 # meridian59-admin-docs
 Meridian 59 Administration Commands
 
-This is an attempt to consolidate various user-created documentation and tips and tricks for administrating Meridian 59 servers.\n
-USE AT YOUR OWN RISK!!!
+This is an attempt to consolidate various user-created documentation and tips and tricks for administrating Meridian 59 servers.\
+# USE AT YOUR OWN RISK!!!
 
 ### Contents
 - [Basics](#Basics)
