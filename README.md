@@ -4,12 +4,12 @@ Meridian 59 Administration Commands
 ### Contents
 - [Basics](#Basics)
 - Move
-  - teleport
-  - 
+  - Teleport
 - Create
   - items
   - character
-- time
+- Lists
+- Meridian Time
 
 ### Basics
 
@@ -481,13 +481,19 @@ sign_newbie_icon_rsc
 ```
 
 Assassin Game Sign:
+```
 sign_name_rsc
+```
+
 assassinsign_name_rsc
 (Not all Junk items that Pacal sells works with this always. Books and Glass Pendants seem to work
 good every time. Try changing the vrIcon line first)
-Create any item:
+Create any item:\
+```
 Create o OrnamentalObject
-Then just set its vrName, Icon and Desc to any resource to make it look like that item.
+```
+Then just set its vrName, Icon and Desc to any resource to make it look like that item.\
+
 List of resources
 Create a simple Edge Exit List anywhere:
 Create a portal and make it go where you want then change it's icon to:
@@ -514,21 +520,27 @@ The piRange line determines how far away from the globe you can be to use it.
 look like another object and spy on rooms!)
 Delete items:
 Send o <ItemObj#> delete
-Make walking NPCs:
-To make an NPC walk is simple. First choose which NPC you want to enable walking on an then look at
-it's properties in the admin window.
+
+Make walking NPCs:\
+
+First choose which NPC you want to enable walking on an then look at its properties in the admin window.\
 Scroll down until you see the line which says piBehavior. Changing the INT will determine how the NPC
-reacts.
-1 = Random Walking.
-2 = Enables you to attack, but the NPC won't move or attack you.
-3 = Makes it a standard, static NPC.
-4 = Lets you attack the NPC, but it will only fight back if you hit it.
-5 = Random Walking.
-6 = Unable to move, but will attack if you walk near it.
-7 = Makes it a standard, static NPC.
-8 = Turns the NPC into an enemy that follows and attacks you.
-9 = Makes the NPC follow you.
-10 = Attacks you if provoked, but doesn't move.
+reacts.\
+
+
+|INT|Behavior|
+|:-|:-|
+1 | Random Walking.
+2 | Enables you to attack, but the NPC won't move or attack you.
+3 | Makes it a standard, static NPC.
+4 | Lets you attack the NPC, but it will only fight back if you hit it.
+5 | Random Walking.
+6 | Unable to move, but will attack if you walk near it.
+7 | Makes it a standard, static NPC.
+8 | Turns the NPC into an enemy that follows and attacks you.
+9 | Makes the NPC follow you.
+10 | Attacks you if provoked, but doesn't move.
+
 That's a small selection of behavior types. If you want to mimic a certain monster behavior, just look at it
 in the admin window and copy the monsters behavior number to your NPC.
 An NPC that has proper walking graphics already made for it, is the Street Urchin. To get this, just type in
