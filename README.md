@@ -98,6 +98,71 @@ send o [object id] somethingchanged
 
 ---
 
+## Lists
+There are two major data structures in use within Meridian 59\
+- Lisp-like nodes on the server
+- Linked-lists in the client
+
+### Viewing lists and list-nodes
+Show a list and walk all the nodes (see everything in the list)
+```show list <listid>```
+
+Show a node in the list
+```show listnode <nodeid>```
+
+Example showing the monsters that spawn at the main gate of cor noth on my test server
+```show list 23294```
+
+OUTPUT
+```
+:<
+: [
+: [
+: CLASS SpiderBaby
+: INT 75
+: ]
+: [
+: CLASS Centipede
+: INT 25
+: ]
+: ]
+:>
+```
+
+Now seeing it with `show listnode` instead of `list`
+```show listnode 23294```
+
+OUTPUT
+```
+:< first = LIST 23290
+:  rest = LIST 23293
+:>
+```
+When we look at the node we see that per the documentation on Cons https://en.wikipedia.org/wiki/Cons, the following is true
+- the listnode contains it's own listnode value for it's first slot, then the rest of the list (if applicable) in the `rest` slot
+- in this case the subnode of this listnode numbered `23294` is `23290`
+
+Now let's see what's in listnode `23290`
+`show listnode 23290`
+
+OUTPUT
+```
+:< first = CLASS SpiderBaby
+:  rest = LIST 23289
+:>
+```
+
+Checking the 23289 listnode in the `rest`
+
+`show listnode 23289`
+
+OUTPUT
+```
+:< first = INT 75
+:  rest = $ 0
+```
+This means that the listnode contains only int 75 (the spawn rate % for `SpiderBaby`) and then ends since `rest` is set to `$ 0`
+
 ## Time
 
 Set game day year day hour etc
