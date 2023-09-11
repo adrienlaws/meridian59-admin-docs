@@ -521,11 +521,11 @@ look like another object and spy on rooms!)
 Delete items:
 Send o <ItemObj#> delete
 
-Make walking NPCs:\
+Make walking NPCs:
 
 First choose which NPC you want to enable walking on an then look at its properties in the admin window.\
 Scroll down until you see the line which says piBehavior. Changing the INT will determine how the NPC
-reacts.\
+reacts.
 
 
 |INT|Behavior|
@@ -542,38 +542,44 @@ reacts.\
 10 | Attacks you if provoked, but doesn't move.
 
 That's a small selection of behavior types. If you want to mimic a certain monster behavior, just look at it
-in the admin window and copy the monsters behavior number to your NPC.
-An NPC that has proper walking graphics already made for it, is the Street Urchin. To get this, just type in
+in the admin window and copy the monsters behavior number to your NPC.\
+An NPC that has proper walking graphics already made for it, is the Street Urchin.\ To get this, just type in
 the admin window:
+```
 Create o TosUrchin
-and then;
+```
+and then:
+```
 send o <RoomObjNumber> teleport what o <NewUrchinObjNumber>
-But any NPC can be made to move, look in the Default Class Name Reference for some NPC class
-names, or just if you can't find one you want in the list, just look at an NPC ingame through the admin
-window to find it's class name. You can also set the NPC's hit points to whatever you want so it stands a
-better chance of survival.
-Globe Numbers:
+```
+But any NPC can be made to move, look in the Default Class Name Reference for some NPC class names, or just if you can't find one you want in the list, just look at an NPC ingame through the admin window to find it's class name. You can also set the NPC's hit points to whatever you want so it stands a better chance of survival.
+
+#### Globe Numbers
 When making new a globe, use these numbers to determine which type of globe it is:
-% newsgroup IDs
- NID_GENERAL = 1 %% NID is currently unplaced anywhere.
- NID_NEW_USERS = 2
- NID_GAME = 3 %% guilds now use their RID_ numbers as
- NID_JUSTICAR = 4
- NID_ADVENTURE = 5 %% bard/actor only newsball
- NID_ANNOUNCEMENTS = 9 %% their NIDs. Do not assign them their
- NID_GUILD_CHARTER = 10 %% own NID.
- NID_GODROOM = 14
- NID_TOS_HALL = 20
- NID_BAR_HALL = 21 %% Adventurer's Hall Newsballs
- NID_JAS_HALL = 22
- NID_COR_HALL = 23
- NID_MAR_HALL = 24
- NID_KOC_HALL = 24
+
+|Newsglobe ID|INT|Comment|
+|:-|:-|:-|
+ NID_GENERAL | 1 | NID is currently unplaced anywhere
+ NID_NEW_USERS | 2
+ NID_GAME | 3 | guilds now use their RID_ numbers as their NIDs. Do not assign them their own NID
+ NID_JUSTICAR | 4
+ NID_ADVENTURE | 5 | bard/actor only newsglobe
+ NID_ANNOUNCEMENTS | 9
+ NID_GUILD_CHARTER | 10
+ NID_GODROOM | 14
+ NID_TOS_HALL | 20
+ NID_BAR_HALL | 21 | Adventurer's Hall newsglobes
+ NID_JAS_HALL | 22
+ NID_COR_HALL | 23
+ NID_MAR_HALL | 24
+ NID_KOC_HALL | 24
 
 ### Reference
 - Admin_Name_Colours.pdf
 - Character_Building.pdf
 
+#### in process
+- Creating_Different_Items.pdf
 #### not implemented or documented
 - General_Admin_Commands.pdf
 - General_Char_Commands.pdf
