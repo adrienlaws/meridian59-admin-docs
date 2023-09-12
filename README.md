@@ -165,6 +165,14 @@ This means that the listnode contains only int 75 (the spawn rate % for `SpiderB
 
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/1ae82405-b6ab-41bd-96fd-9f50d14a0cd5)
 
+### modifying room .kod spawn lists
+edit room .kod example g4.kod for main gate of cor noth
+change plMonsters = [ [&SpiderBaby, 75], [&Centipede, 25] ]; to something different like plMonsters = [ [&Troll, 75], [&Spider, 25] ];
+run nmake in the /kod folder
+run reload system in the admin console
+get the room object number and send recreate example send object 7003 recreate
+the screen will flash and new mobs will appear as the room is reconstructed
+
 ### adding a single monster class in a room
 Create spawnrate value for new mob spawn class type
 create listnode int 100 $ 0
@@ -321,6 +329,31 @@ Color Item
 Black (int 44)
 Dark Green (int 37)
 Crimson splash (int 42)
+
+### use xlat to create new content
+open blakston.khd and look for the xlat list.  they'll say stuff like XLAT_GRAY_TO_??? or XLAT_BLUE_TO_??? so you just look at the thing you're trying to recolor and make sure the color shown matches the graphic you're trying to recolor
+
+and if an object has, say, both blue and red bits and you want to recolor both, there's a way to get a combined value:
+
+send o 0 EncodeTwoColorXlat color1 int AAA color2 int BBB
+
+#### code version
+```
+local iCombinedColor;
+
+iCombinedColor = Send(SYS, @EncodeTwoColorXlat, #color1=AAA, #color2=BBB);
+```
+
+
+### Delete a user from an account
+```
+delete user userObjectId
+```
+
+### How to hide from the who list and be completely invisible 
+```
+DM Hidden
+```
 
 ### Admin Name Colors
 Green Bard/Admin Name:
@@ -776,7 +809,10 @@ When making new a globe, use these numbers to determine which type of globe it i
 - Editing_Things_via_Hex.pdf
 
 ### Attribution
+- Aesica
+- Essun
 - Haven
 - Diggie
+- Mayhem
 - Others (please let me know I will add you)
 - [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
