@@ -3,7 +3,7 @@
 `meridian59-admin-docs`\
 This is an attempt to consolidate various user-created documentation and tips and tricks for administrating Meridian 59 servers.\
 :heavy_exclamation_mark: Use at your own risk :heavy_exclamation_mark:
-### Attribution and Contributions
+### Attribution and Contributions :mega:
 - Aesica
 - Essun
 - Haven
@@ -14,12 +14,12 @@ This is an attempt to consolidate various user-created documentation and tips an
 - [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
 
 Contributions are welcome!  Feel free to submit a Pull Request for any additions or corrections.
-### Using Commands
+### Using Commands :hammer:
 
 There are 4 ways to perform administrative commands
-1. Client commands from the normal text window
-2. Administrator commands from the Administrator console within the Meridian 59 client
-3. Administrator commands from the Server Administration Console on the server itself
+1. Client commands from the normal text window :computer:
+2. Administrator commands from the Administrator console within the Meridian 59 client :computer:
+3. Administrator commands from the Server Administration Console on the server itself :computer:
 4. Commands sent through the maintenenance port (mostly used for automatic account management)
 
 `shift+4` opens the administration console from the Meridian 59 client.\
