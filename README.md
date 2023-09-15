@@ -161,51 +161,72 @@ OUTPUT
 :< first = INT 75
 :  rest = $ 0
 ```
-This means that the listnode contains only int 75 (the spawn rate % for `SpiderBaby`) and then ends since `rest` is set to `$ 0`
+This means that the listnode contains only `int 75` (the spawn rate % for `SpiderBaby`) and then ends since `rest` is set to `$ 0`
 
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/1ae82405-b6ab-41bd-96fd-9f50d14a0cd5)
 
 ### modifying room .kod spawn lists
-edit room .kod example g4.kod for main gate of cor noth
-change plMonsters = [ [&SpiderBaby, 75], [&Centipede, 25] ]; to something different like plMonsters = [ [&Troll, 75], [&Spider, 25] ];
-run nmake in the /kod folder
-run reload system in the admin console
-get the room object number and send recreate example send object 7003 recreate
-the screen will flash and new mobs will appear as the room is reconstructed
+edit room .kod example `g4.kod` for main gate of cor noth\
+change `plMonsters` = `[ [&SpiderBaby, 75], [&Centipede, 25] ];` to something different\
+Example: `plMonsters` = `[ [&Troll, 75], [&Spider, 25] ];`\
+build the kod folder (for windows systems run ``` nmake ``` in the /kod folder)\
+run `reload system` in the admin console\
+get the room object number and `send recreate example send object 7003 recreate`\
+the screen will flash and new mobs will appear as the room is reconstructed\
 
 ### adding a single monster class in a room
-Create spawnrate value for new mob spawn class type
+Create spawnrate value for new mob spawn class type\
+```
 create listnode int 100 $ 0
-Created list node [spawn rate list id]
+```
+OUTPUT: `Created list node [spawn rate list id]`
 
-Create monster class to spawn and associate with spawnrate value - example mob classes "ant" "troll"
+Create monster class to spawn and associate with spawnrate value - example mob classes "ant" "troll"\
+```
 create listnode class [mob class name] list [spawn rate list id]
-Created list node [mob class list id]
+```
+`Created list node [mob class list id]`
 
 Create list of lists to populate room plMonsters parameter
+
+```
 create listnode list [mob class list id] $ 0
-Created list node [room mob list]
+```
+OUTPUT: `Created list node [room mob list]`
 
 Assign list to room
+```
 set object [room obj id] plMonsters LIST [room mob list id]
+```
 
 Kill all old monsters
+```
 cast armageddon
+```
+
 Wait and see if the new mobs spawn
 
 ### adding 2 monster classes in a room
 Create spawnrate value for new mob spawn class type
+```
 create listnode int [value] $ 0
-Created list node [spawn rate list id]
+```
+OUTPUT: `Created list node [spawn rate list id]`\
 For [value] use 1-100, this is the % spawnrate.
 
-Create monster class to spawn and associate with spawnrate value - example mob classes "ant" "troll"
+Create monster class to spawn and associate with spawnrate value\
+example mob classes "ant" "troll"
+```
 create listnode class [mob class name] list [spawn rate list id]
-Created list node [FIRST mob class list id]
+```
+
+OUTPUT: `Created list node [FIRST mob class list id]`
 
 Create list of first monster list and save this list id for later
+```
 create listnode list [FIRST mob class list id] $ 0
-Created list node [FIRST room mob list]
+```
+OUTPUT: `Created list node [FIRST room mob list]`\
 If you only want one monster in the room, you are done. Use LIST [FIRST room mob list] for plMonsters in the room.
 
 Create spawnrate value for SECOND mob spawn class type
