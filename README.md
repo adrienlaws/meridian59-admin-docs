@@ -1,23 +1,29 @@
-# meridian59-admin-docs
-Meridian 59 Administration Commands
 
+# Meridian 59 Administration Commands
+`meridian59-admin-docs`\
 This is an attempt to consolidate various user-created documentation and tips and tricks for administrating Meridian 59 servers.\
-# USE AT YOUR OWN RISK!!!
+:heavy_exclamation_mark: Use at your own risk :heavy_exclamation_mark:
+### Attribution and Contributions
+- Aesica
+- Essun
+- Haven
+- Diggie
+- Mayhem
+- Toko
+- Others (please let me know I will add you)
+- [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
 
-### Contents
-- [Basics](#Basics)
-- Move
-  - Teleport
-- Create
-  - items
-  - character
-- Lists
-- Meridian Time
+Contributions are welcome!  Feel free to submit a Pull Request for any additions or corrections.
+### Using Commands
 
-### Basics
+There are 4 ways to perform administrative commands
+1. Client commands from the normal text window
+2. Administrator commands from the Administrator console within the Meridian 59 client
+3. Administrator commands from the Server Administration Console on the server itself
+4. Commands sent through the maintenenance port (mostly used for automatic account management)
 
-`shift+4` opens the administration console from the Meridian 59 client.<br>
-You must have permissions to do so.<br>
+`shift+4` opens the administration console from the Meridian 59 client.\
+You must have permissions to do so.\
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/50a1ce77-817b-4368-bc75-03e8a630072a)
 
 
@@ -829,11 +835,3 @@ When making new a globe, use these numbers to determine which type of globe it i
 - Creating_Different_Items.pdf
 - Editing_Things_via_Hex.pdf
 
-### Attribution
-- Aesica
-- Essun
-- Haven
-- Diggie
-- Mayhem
-- Others (please let me know I will add you)
-- [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
