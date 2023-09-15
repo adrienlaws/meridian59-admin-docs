@@ -10,6 +10,7 @@ This is an attempt to consolidate various user-created documentation and tips an
 - Diggie
 - Mayhem
 - Toko
+- The creators and former administrators (Zaphod, etc)
 - Others (please let me know I will add you)
 - [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
 
