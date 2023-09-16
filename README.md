@@ -64,7 +64,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm night`|:first_quarter_moon_with_face:	
 `dm restore time`|:hammer_and_wrench:	
 
-### DM Diguises
+### DM Disguises
 |Command|Graphic|Notes|
 |:-|:-|:-|
 `dm anonymous`| |Removes the name from your character, but still appears in who list. Repeat the command to restore your name.
@@ -82,8 +82,7 @@ dm logoffghost on
 dm logoffghost off
 dm logoffghost temp off
 dm event sign
-dm monster monstername (you got this one I think)
-dm totem
+dm totem| ![Alt text](dm_totem.png)| This feathered totem is oft the objective of quests set upon mortals by the Bards of the world of Meridian.<br><br>The totem must be held when in possession, and is dropped when removed from use.
 dm appeal off
 dm appeal on
 dm guest appeal off (probably defunct)
