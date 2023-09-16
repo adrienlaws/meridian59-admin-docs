@@ -23,6 +23,37 @@ You must be logged on as an admin to do so.
 
 ### Commands
 
+
+<table>
+<tr>
+<td> Command </td> <td> Description </td>
+</tr>
+<tr>
+<td> Go to a specific room </td>
+<td>
+
+```
+go <room string> 
+```
+
+</td>
+</tr>
+<tr>
+<td> 400 </td>
+<td>
+
+**Markdown** _here_. (↕︎ Blank lines above and below!)
+
+</td>
+</tr>
+</table>
+
+
+Go to a specific room | ``` go <room string> 
+```
+2 | Enables you to attack, but the NPC won't move or attack you.
+
+
 ---
 
 Go to a specific room
