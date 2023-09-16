@@ -77,7 +77,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm monster <monstername>` | Example: "dm monster ant"
 ### Configure Logoff Ghosts and Penalties
 |Command|Notes|
-|:-||:-|
+|:-|:-|
 `dm logoffghost on` | Logoff penalties are now active.
 `dm logoffghost off` | Logoff penalties are now inactive.
 `dm logoffghost temp off` | Logoff penalties are now temporarily inactive.
