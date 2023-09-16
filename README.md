@@ -855,7 +855,6 @@ When making new a globe, use these numbers to determine which type of globe it i
 - Haven
 - Diggie
 - Mayhem
-- Toko
-- The creators and former administrators (Zaphod, etc)
+- Zaphod
 - Others (please let me know I will add you)
 - [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
