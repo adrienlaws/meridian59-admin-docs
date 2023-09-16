@@ -34,15 +34,15 @@ There are 3 levels of commands
 |:-|:-|
 `go <room string>` | you can use go 50 (using the id directly) instead of needing to use the rid strings
 
-### Lighting
-|Command|Graphic|
-|:-|:-:|
-`dm place candle`|![Alt text](candle.png)
-`dm place candelabra`|![Alt text](candelabra.png)
-`dm place brazier`|![Alt text](brazier.png)
-`dm place lamp`|![Alt text](lamp.png)
-`dm place firepit`|![Alt text](firepit.png)
-`dm place dynamic light` | ![Alt text](dynamic_light.png)
+### Create Lighting
+|Command|Graphic|Description
+|:-|:-:|:-|
+`dm place candle`|![Alt text](candle.png)|A beeswax candle burns brightly.
+`dm place candelabra`|![Alt text](candelabra.png)| An ornate brass five-candle stand.  The candles are flickering softly.
+`dm place brazier`|![Alt text](brazier.png)|The flame burns bright, offering welcome light to the surroundings.
+`dm place lamp`|![Alt text](lamp.png)|These lamps stand like silent sentinels.
+`dm place firepit`|![Alt text](firepit.png)|This small fire offers both light and warmth to the surrounding area.
+`dm place dynamic light` | ![Alt text](dynamic_light.png)| You are looking at an object
 
 Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 ### Create Event Items - Totems, Signs, Relics
@@ -55,7 +55,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm relic 3`|![Alt text](relic_3.png)| Antiquarians claim there only to be a few of the priceless Minjaka Vases left in existence.  These exquisitely mastered vases use to line the throne room of Castle Victoria during the Minjakan dynasty of explorers in the second century.<br><br>Being one of a kind, this vase can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 4`|![Alt text](relic_4.png)| Thought to be an artifact from the Empire of the Nexus before this land was even discovered, this ancient shield is too old and valuable to be used in combat.<br><br>Being one of a kind, this shield can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 5`|![Alt text](relic_5.png)| Fabricated in the 5th century, this one of a kind heirloom was meant to be delivered as a gift to the Emperor of the old land.  Before the couriers could set out, the Nexus snapped, destroying any possible route to the empire.  The Chalice was lost for centuries, thought to be absconded with by thieves.<br><br>Being one of a kind, this Chalice can not be carried in one's possession for very long or tucked away in a chest.|
-### Change Time
+### Change Server Time
 |Command|Icon|
 |:-|:-|
 `dm morning`| :sunrise:	
@@ -89,7 +89,10 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm evil` | set karma -100
 `dm neutral` | set karma 0
 
-dm rumble | shakes the screen in the area
+### Actions
+|Command||Notes|
+|:-||:-|
+`dm rumble `| shakes the screen in the area
 
 dm create item attribute attributenamehere
 dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
