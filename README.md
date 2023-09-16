@@ -46,14 +46,6 @@ There are 3 levels of commands
 
 Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 
-
-dm create item attribute attributenamehere
-`dm anonymous`
-`dm shadow`
-`dm stealth on`
-`dm stealth off`
-`dm monster monstername`
-
 ### Create Relics
 |Command&nbsp;&nbsp;&nbsp; |Graphic|Description|
 |:-|:-:|:-|
@@ -63,6 +55,27 @@ dm create item attribute attributenamehere
 `dm relic 4`|![Alt text](relic_4.png)| Thought to be an artifact from the Empire of the Nexus before this land was even discovered, this ancient shield is too old and valuable to be used in combat.<br><br>Being one of a kind, this shield can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 5`|![Alt text](relic_5.png)| Fabricated in the 5th century, this one of a kind heirloom was meant to be delivered as a gift to the Emperor of the old land.  Before the couriers could set out, the Nexus snapped, destroying any possible route to the empire.  The Chalice was lost for centuries, thought to be absconded with by thieves.<br><br>Being one of a kind, this Chalice can not be carried in one's possession for very long or tucked away in a chest.|
 
+### Change Time
+|Command|Icon|
+|:-|:-|
+`dm morning`| :sunrise:	
+`dm afternoon`|:sun_with_face:	
+`dm evening`|:city_sunset:	
+`dm night`|:first_quarter_moon_with_face:	
+`dm restore time`|:hammer_and_wrench:	
+
+### DM Diguises
+|Command|Graphic|Notes|
+|:-|:-|:-|
+`dm anonymous`| Removes the name from your character, but still appears in who list. Repeat the command to restore your name.
+`dm shadow`| ![Alt text](dm_shadow.png) | shadowform
+`dm stealth on` | | You are now in stealth mode.
+`dm stealth off`| | 
+
+
+
+`dm monster monstername`
+dm create item attribute attributenamehere
 dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
 dm immortal (same as above)
 dm logoffghost on
@@ -91,14 +104,7 @@ dm pk disable (makes you angeled I think?)
 dm pk lock (cannot attack/be attacked I think)
 dm pk unlock (removes pk lock)
 
-### Time
-|Command|Icon|
-|:-|:-|
-`dm morning`| :sunrise:	
-`dm afternoon`|:sun_with_face:	
-`dm evening`|:city_sunset:	
-`dm night`|:first_quarter_moon_with_face:	
-`dm restore time`|:hammer_and_wrench:	
+
 
 dm call monster (unsure?  does it force room spawns?)
 dm plain (change to normal form)
