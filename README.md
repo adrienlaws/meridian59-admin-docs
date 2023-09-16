@@ -661,6 +661,26 @@ send c user GivePlayerAllSpells level INT 6
 
 
 ### Creating Different Items
+
+Place dynamic light\
+only usable by administrator and up
+```
+dm place dynamic light
+```
+
+there's a dm place dynamic light too - only usable by administrator and up though
+```
+dm place candle
+```
+
+```
+dm place candelabra
+```
+
+```
+dm place brazier
+```
+
 Create Statues:\
 First create a statue somewhere:
 ```
@@ -809,6 +829,8 @@ and then:
 send o <RoomObjNumber> teleport what o <NewUrchinObjNumber>
 ```
 But any NPC can be made to move, look in the Default Class Name Reference for some NPC class names, or just if you can't find one you want in the list, just look at an NPC ingame through the admin window to find it's class name. You can also set the NPC's hit points to whatever you want so it stands a better chance of survival.
+
+
 
 #### Globe Numbers
 When making new a globe, use these numbers to determine which type of globe it is:
