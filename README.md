@@ -35,12 +35,14 @@ There are 3 levels of commands
 `go <room string>` | Go to a specific room | you can use go 50 (using the id directly) instead of needing to use the rid strings
 
 ### Lighting
-dm place dynamic light | only usable by administrator and up though
-dm place candle
-dm place candelabra
-dm place brazier
-dm place lamp
-dm place firepit
+|Command|Description|Notes|
+|:-|:-|:-|
+`dm place dynamic light` | only usable by administrator and up though
+`dm place candle`
+`dm place candelabra`
+`dm place brazier`
+`dm place lamp`
+`dm place firepit`
 
 dm create item attribute attributenamehere
 dm anonymous
@@ -76,11 +78,13 @@ dm pk lock (cannot attack/be attacked I think)
 dm pk unlock (removes pk lock)
 
 ### Time
-dm morning
-dm afternoon
-dm evening
-dm night
-dm restore time
+|Command|Description|Notes|
+|:-|:-|:-|
+`dm morning`
+`dm afternoon`
+`dm evening`
+`dm night`
+`dm restore time`
 
 dm call monster (unsure?  does it force room spawns?)
 dm plain (change to normal form)
