@@ -23,35 +23,67 @@ You must be logged on as an admin to do so.
 
 ### Commands
 
+There are 3 levels of commands
+- Player
+- DM
+- Admin
 
-<table>
-<tr>
-<td> Command </td> <td> Description </td>
-</tr>
-<tr>
-<td> Go to a specific room </td>
-<td>
+#### DM Commands
 
-```
-go <room string> 
-```
-
-</td>
-</tr>
-<tr>
-<td> 400 </td>
-<td>
-
-**Markdown** _here_. (↕︎ Blank lines above and below!)
-
-</td>
-</tr>
-</table>
-
-
-Go to a specific room | ``` go <room string> 
-```
-2 | Enables you to attack, but the NPC won't move or attack you.
+|Command|Description|Notes|
+|:-|:-|:-|
+`go <room string>` | Go to a specific room | you can use go 50 (using the id directly) instead of needing to use the rid strings
+dm place dynamic light | only usable by administrator and up though
+dm place candle
+dm place candelabra
+dm place brazier
+dm place lamp
+dm place firepit
+dm create item attribute attributenamehere
+dm anonymous
+dm shadow
+dm relic 1 (or 2, 3, 4, 5)
+dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
+dm immortal (same as above)
+dm logoffghost on
+dm logoffghost off
+dm logoffghost temp off
+dm event sign
+dm monster monstername (you got this one I think)
+dm totem
+dm appeal off
+dm appeal on
+dm guest appeal off (probably defunct)
+dm guest appeal on (same)
+dm stealth on
+dm stealth off
+dm rumble
+dm good
+dm evil
+dm neutral
+dm monster budget (???)
+dm monster authorize (???)
+dm none (???)
+dm clear abilities
+dm clear inventory
+dm get money
+dm pk enable (makes you attackable)
+dm pk disable (makes you angeled I think?)
+dm pk lock (cannot attack/be attacked I think)
+dm pk unlock (removes pk lock)
+dm morning
+dm afternoon
+dm evening
+dm night
+dm restore time
+dm call monster (unsure?  does it force room spawns?)
+dm plain (change to normal form)
+dm human (same as above I think?)
+dm disguise ant (or other monster name)
+dm get items (you covered this)
+dm get `misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
+dm hidden
+dm blank
 
 
 ---
