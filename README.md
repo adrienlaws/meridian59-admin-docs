@@ -30,12 +30,12 @@ There are 3 levels of commands
 
 ### DM Commands
 
-|Command|Description|
-|:-|:-|:-|
+|Command|Notes|
+|:-|:-|
 `go <room string>` | you can use go 50 (using the id directly) instead of needing to use the rid strings
 
 ### Lighting
-|Command|Description|
+|Command|Notes|
 |:-|:-|
 `dm place dynamic light` | only usable by administrator and up though
 `dm place candle`
@@ -45,8 +45,11 @@ There are 3 levels of commands
 `dm place firepit`
 
 dm create item attribute attributenamehere
-dm anonymous
-dm shadow
+`dm anonymous`
+`dm shadow`
+`dm stealth on`
+`dm stealth off`
+`dm monster monstername`
 dm relic 1 (or 2, 3, 4, 5)
 dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
 dm immortal (same as above)
@@ -60,8 +63,7 @@ dm appeal off
 dm appeal on
 dm guest appeal off (probably defunct)
 dm guest appeal on (same)
-dm stealth on
-dm stealth off
+
 dm rumble
 dm good
 dm evil
@@ -78,8 +80,8 @@ dm pk lock (cannot attack/be attacked I think)
 dm pk unlock (removes pk lock)
 
 ### Time
-|Command|Description|Notes|
-|:-|:-|:-|
+|Command|Notes|
+|:-|:-|
 `dm morning`
 `dm afternoon`
 `dm evening`
