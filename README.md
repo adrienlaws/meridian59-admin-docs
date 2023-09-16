@@ -5,7 +5,7 @@ This is an attempt to consolidate various user-created documentation and tips an
 :heavy_exclamation_mark: Use at your own risk :heavy_exclamation_mark:
 
 Contributions are welcome!  Feel free to submit a Pull Request for any additions or corrections.
-### Using Commands :hammer:
+### Administration Methods
 
 There are 4 ways administrate Meridian 59
 1. the normal client text window
