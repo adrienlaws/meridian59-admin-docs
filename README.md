@@ -1,10 +1,8 @@
 
 # Meridian 59 Administration Commands
-`meridian59-admin-docs`\
-This is an attempt to consolidate various user-created documentation and tips and tricks for administrating Meridian 59 servers.\
 :heavy_exclamation_mark: Use at your own risk :heavy_exclamation_mark:
 
-Contributions are welcome!  Feel free to submit a Pull Request for any additions or corrections.
+Contributions / PRs are welcome!
 ### Administration Methods
 
 There are 4 ways administrate Meridian 59
@@ -16,28 +14,38 @@ There are 4 ways administrate Meridian 59
 
 #### The Client Administration Console (shift+4)
 
-`shift+4` opens the administration console from the Meridian 59 client.\
-You must have permissions to do so.\
+Open the Client Administration Console using `shift+4` \
+You must be logged on as an admin to do so.
+
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/50a1ce77-817b-4368-bc75-03e8a630072a)
 
 
-Move
+### Commands
+
+---
+
+Go to a specific room
 
 ```
-go rid_<room_name_string>
-```
-Example: `go rid_tos`
-
-Or use this command in the administration console
-
-```
-send object <player object number> teleportto rid int <room id>
+go <room string>
 ```
 Example: `go rid_tos`
 
-check `blakston.khd` for the room id values
+The room string value is from `blakston.khd`\
+example: `RID_TOS = 50`
 
-Link to [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) from the official Meridian 59 repository.
+`RID_TOS` is the room string value to use with the `go` command\
+`50` is the equivalent room id (RID) used in other commands
+
+Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) for room values from the official Meridian 59 repository.
+
+---
+
+Send an object to a specific room id
+```
+send object <object number> teleportto rid int <room id>
+```
+Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) for the room id (RID) values from the official Meridian 59 repository.
 
 ---
 
