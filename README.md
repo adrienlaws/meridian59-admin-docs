@@ -67,7 +67,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 ### DM Diguises
 |Command|Graphic|Notes|
 |:-|:-|:-|
-`dm anonymous`| Removes the name from your character, but still appears in who list. Repeat the command to restore your name.
+`dm anonymous`| |Removes the name from your character, but still appears in who list. Repeat the command to restore your name.
 `dm shadow`| ![Alt text](dm_shadow.png) | shadowform
 `dm stealth on` | | You are now in stealth mode.
 `dm stealth off`| | 
