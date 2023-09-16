@@ -37,12 +37,15 @@ There are 3 levels of commands
 ### Lighting
 |Command|Notes|
 |:-|:-|
-`dm place dynamic light` | only usable by administrator and up though
-`dm place candle`
-`dm place candelabra`
-`dm place brazier`
-`dm place lamp`
-`dm place firepit`
+`dm place candle`|![Alt text](candle.png)
+`dm place candelabra`|![Alt text](candelabra.png)
+`dm place brazier`|![Alt text](brazier.png)
+`dm place lamp`|![Alt text](lamp.png)
+`dm place firepit`|![Alt text](firepit.png)
+`dm place dynamic light` | ![Alt text](dynamic_light.png)
+
+Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
+
 
 dm create item attribute attributenamehere
 `dm anonymous`
