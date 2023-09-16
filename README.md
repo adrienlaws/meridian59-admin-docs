@@ -45,7 +45,6 @@ There are 3 levels of commands
 `dm place dynamic light` | ![Alt text](dynamic_light.png)
 
 Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
-
 ### Create Event Items - Totems, Signs, Relics
 |Command&nbsp;&nbsp;&nbsp; |Graphic|Description|
 |:-|:-:|:-|
@@ -56,8 +55,6 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm relic 3`|![Alt text](relic_3.png)| Antiquarians claim there only to be a few of the priceless Minjaka Vases left in existence.  These exquisitely mastered vases use to line the throne room of Castle Victoria during the Minjakan dynasty of explorers in the second century.<br><br>Being one of a kind, this vase can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 4`|![Alt text](relic_4.png)| Thought to be an artifact from the Empire of the Nexus before this land was even discovered, this ancient shield is too old and valuable to be used in combat.<br><br>Being one of a kind, this shield can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 5`|![Alt text](relic_5.png)| Fabricated in the 5th century, this one of a kind heirloom was meant to be delivered as a gift to the Emperor of the old land.  Before the couriers could set out, the Nexus snapped, destroying any possible route to the empire.  The Chalice was lost for centuries, thought to be absconded with by thieves.<br><br>Being one of a kind, this Chalice can not be carried in one's possession for very long or tucked away in a chest.|
-
-
 ### Change Time
 |Command|Icon|
 |:-|:-|
@@ -76,29 +73,34 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm hidden` | You are hidden from mortal eyes.
 `dm blank` | You are now blank.
 `dm plain` | change back to normal form
-
-
-`dm monster monstername`
-dm create item attribute attributenamehere
-dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
-dm immortal (same as above)
+### Create Monsters
+`dm monster <monstername>` | Example: "dm monster ant"
+### Configure Logoff Ghosts and Penalties
+|Command||Notes|
+|:-||:-|
 `dm logoffghost on` | Logoff penalties are now active.
 `dm logoffghost off` | Logoff penalties are now inactive.
 `dm logoffghost temp off` | Logoff penalties are now temporarily inactive.
 
+### Set Karma
+|Command||Notes|
+|:-||:-|
+`dm good` | set karma +100
+`dm evil` | set karma -100
+`dm neutral` | set karma 0
 
+dm rumble | shakes the screen in the area
+
+dm create item attribute attributenamehere
+dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
+dm immortal (same as above)
 
 dm appeal off
 dm appeal on
 dm guest appeal off (probably defunct)
 dm guest appeal on (same)
 
-### Set Karma
-dm good | set karma +100
-dm evil | set karma -100
-dm neutral | set karma 0
 
-dm rumble | shakes the screen in the area
 
 dm monster budget (???)
 dm monster authorize (???)
@@ -117,8 +119,6 @@ dm human (same as above I think?)
 dm disguise ant (or other monster name)
 dm get items (you covered this)
 dm get `misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
-
-
 
 ---
 
