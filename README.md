@@ -90,7 +90,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm neutral` | set karma 0
 
 ### Actions
-|Command||Notes|
+|Command|Notes|
 |:-|:-|
 `dm rumble `| shakes the screen in the area
 
