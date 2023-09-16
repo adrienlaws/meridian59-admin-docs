@@ -47,11 +47,22 @@ send object <object number> teleportto rid int <room id>
 ```
 Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) for the room id (RID) values from the official Meridian 59 repository.
 
+
 ---
 
-Go on a tour of all rooms
+admin command reference
+`kod\object\active\holder\nomoveon\battler\player\user\dm\admin.kod`
+
+
+
+Start tour of all rooms
 ```
 dm start tour
+```
+
+Stop tour
+```
+dm end tour
 ```
 
 Populate map of current room
