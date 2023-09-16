@@ -30,13 +30,13 @@ There are 3 levels of commands
 
 ### DM Commands
 
-|Command|Description|Notes|
+|Command|Description|
 |:-|:-|:-|
-`go <room string>` | Go to a specific room | you can use go 50 (using the id directly) instead of needing to use the rid strings
+`go <room string>` | you can use go 50 (using the id directly) instead of needing to use the rid strings
 
 ### Lighting
-|Command|Description|Notes|
-|:-|:-|:-|
+|Command|Description|
+|:-|:-|
 `dm place dynamic light` | only usable by administrator and up though
 `dm place candle`
 `dm place candelabra`
