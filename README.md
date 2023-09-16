@@ -54,7 +54,7 @@ dm create item attribute attributenamehere
 `dm stealth off`
 `dm monster monstername`
 
-### Relics
+### Create Relics
 |Command|Notes|Notes|
 |:-|:-|:-|
 `dm relic 1`|![Alt text](relic_1.png)| This decorative piece of art was created for King Zarcos the 4th to be given to his wife on their wedding day.  Later, when Queen Joline was convicted of treason and exiled, the king ordered the heirloom destroyed because it reminded him of her. Apparently, the orders were not completely carried out.<br><br>Being one of a kind, this heirloom can not be carried in one's possession for very long or tucked away in a chest.|
