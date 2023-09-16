@@ -92,13 +92,13 @@ dm pk lock (cannot attack/be attacked I think)
 dm pk unlock (removes pk lock)
 
 ### Time
-|Command|Notes|
+|Command|Icon|
 |:-|:-|
-`dm morning`
-`dm afternoon`
-`dm evening`
-`dm night`
-`dm restore time`
+`dm morning`| :sunrise:	
+`dm afternoon`|:sun_with_face:	
+`dm evening`|:city_sunset:	
+`dm night`|:first_quarter_moon_with_face:	
+`dm restore time`|:hammer_and_wrench:	
 
 dm call monster (unsure?  does it force room spawns?)
 dm plain (change to normal form)
