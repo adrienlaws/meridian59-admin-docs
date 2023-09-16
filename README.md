@@ -46,10 +46,11 @@ There are 3 levels of commands
 
 Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 
-### Create Totems and Relics
+### Create Event Items - Totems, Signs, Relics
 |Command&nbsp;&nbsp;&nbsp; |Graphic|Description|
 |:-|:-:|:-|
 `dm totem`| ![Alt text](dm_totem.png)| This feathered totem is oft the objective of quests set upon mortals by the Bards of the world of Meridian.<br><br>The totem must be held when in possession, and is dropped when removed from use.
+`dm event sign`|![Alt text](dm_event_sign.png)| Creates a generic event sign
 `dm relic 1`|![Alt text](relic_1.png)| This decorative piece of art was created for King Zarcos the 4th to be given to his wife on their wedding day.  Later, when Queen Joline was convicted of treason and exiled, the king ordered the heirloom destroyed because it reminded him of her. Apparently, the orders were not completely carried out.<br><br>Being one of a kind, this heirloom can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 2`|![Alt text](relic_2.png)| Excavated during the construction of the palace of the dark Princess Venya'cyr, the Urn came quickly into her possession as a valued treasure.  Ancient rumors suggest the Urn is cursed.  The craftsmanship of this priceless relic comes from unknown origins, certainly predating the Meridian settlers.  An unusual presence prevents this object from being stored in a chest or held for very long.|
 `dm relic 3`|![Alt text](relic_3.png)| Antiquarians claim there only to be a few of the priceless Minjaka Vases left in existence.  These exquisitely mastered vases use to line the throne room of Castle Victoria during the Minjakan dynasty of explorers in the second century.<br><br>Being one of a kind, this vase can not be carried in one's possession for very long or tucked away in a chest.|
@@ -65,7 +66,6 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm evening`|:city_sunset:	
 `dm night`|:first_quarter_moon_with_face:	
 `dm restore time`|:hammer_and_wrench:	
-
 ### DM Disguises
 |Command|Graphic|Notes|
 |:-|:-|:-|
@@ -73,48 +73,51 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm shadow`| ![Alt text](dm_shadow.png) | shadowform
 `dm stealth on` | | You are now in stealth mode.
 `dm stealth off`| | 
-
+`dm hidden` | You are hidden from mortal eyes.
+`dm blank` | You are now blank.
+`dm plain` | change back to normal form
 
 
 `dm monster monstername`
 dm create item attribute attributenamehere
 dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
 dm immortal (same as above)
-dm logoffghost on
-dm logoffghost off
-dm logoffghost temp off
-dm event sign
+`dm logoffghost on` | Logoff penalties are now active.
+`dm logoffghost off` | Logoff penalties are now inactive.
+`dm logoffghost temp off` | Logoff penalties are now temporarily inactive.
+
+
 
 dm appeal off
 dm appeal on
 dm guest appeal off (probably defunct)
 dm guest appeal on (same)
 
-dm rumble
-dm good
-dm evil
-dm neutral
+### Set Karma
+dm good | set karma +100
+dm evil | set karma -100
+dm neutral | set karma 0
+
+dm rumble | shakes the screen in the area
+
 dm monster budget (???)
 dm monster authorize (???)
 dm none (???)
 dm clear abilities
 dm clear inventory
-dm get money
+dm get money | creates 500,000 shillings
 dm pk enable (makes you attackable)
 dm pk disable (makes you angeled I think?)
 dm pk lock (cannot attack/be attacked I think)
 dm pk unlock (removes pk lock)
 
-
-
 dm call monster (unsure?  does it force room spawns?)
-dm plain (change to normal form)
+
 dm human (same as above I think?)
 dm disguise ant (or other monster name)
 dm get items (you covered this)
 dm get `misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
-dm hidden
-dm blank
+
 
 
 ---
