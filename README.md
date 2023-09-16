@@ -46,14 +46,16 @@ There are 3 levels of commands
 
 Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 
-### Create Relics
+### Create Totems and Relics
 |Command&nbsp;&nbsp;&nbsp; |Graphic|Description|
 |:-|:-:|:-|
+`dm totem`| ![Alt text](dm_totem.png)| This feathered totem is oft the objective of quests set upon mortals by the Bards of the world of Meridian.<br><br>The totem must be held when in possession, and is dropped when removed from use.
 `dm relic 1`|![Alt text](relic_1.png)| This decorative piece of art was created for King Zarcos the 4th to be given to his wife on their wedding day.  Later, when Queen Joline was convicted of treason and exiled, the king ordered the heirloom destroyed because it reminded him of her. Apparently, the orders were not completely carried out.<br><br>Being one of a kind, this heirloom can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 2`|![Alt text](relic_2.png)| Excavated during the construction of the palace of the dark Princess Venya'cyr, the Urn came quickly into her possession as a valued treasure.  Ancient rumors suggest the Urn is cursed.  The craftsmanship of this priceless relic comes from unknown origins, certainly predating the Meridian settlers.  An unusual presence prevents this object from being stored in a chest or held for very long.|
 `dm relic 3`|![Alt text](relic_3.png)| Antiquarians claim there only to be a few of the priceless Minjaka Vases left in existence.  These exquisitely mastered vases use to line the throne room of Castle Victoria during the Minjakan dynasty of explorers in the second century.<br><br>Being one of a kind, this vase can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 4`|![Alt text](relic_4.png)| Thought to be an artifact from the Empire of the Nexus before this land was even discovered, this ancient shield is too old and valuable to be used in combat.<br><br>Being one of a kind, this shield can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 5`|![Alt text](relic_5.png)| Fabricated in the 5th century, this one of a kind heirloom was meant to be delivered as a gift to the Emperor of the old land.  Before the couriers could set out, the Nexus snapped, destroying any possible route to the empire.  The Chalice was lost for centuries, thought to be absconded with by thieves.<br><br>Being one of a kind, this Chalice can not be carried in one's possession for very long or tucked away in a chest.|
+
 
 ### Change Time
 |Command|Icon|
@@ -82,7 +84,7 @@ dm logoffghost on
 dm logoffghost off
 dm logoffghost temp off
 dm event sign
-dm totem| ![Alt text](dm_totem.png)| This feathered totem is oft the objective of quests set upon mortals by the Bards of the world of Meridian.<br><br>The totem must be held when in possession, and is dropped when removed from use.
+
 dm appeal off
 dm appeal on
 dm guest appeal off (probably defunct)
