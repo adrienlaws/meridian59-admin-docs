@@ -3,25 +3,18 @@
 `meridian59-admin-docs`\
 This is an attempt to consolidate various user-created documentation and tips and tricks for administrating Meridian 59 servers.\
 :heavy_exclamation_mark: Use at your own risk :heavy_exclamation_mark:
-### Attribution and Contributions :mega:
-- Aesica
-- Essun
-- Haven
-- Diggie
-- Mayhem
-- Toko
-- The creators and former administrators (Zaphod, etc)
-- Others (please let me know I will add you)
-- [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
 
 Contributions are welcome!  Feel free to submit a Pull Request for any additions or corrections.
 ### Using Commands :hammer:
 
-There are 4 ways to perform administrative commands
-1. Client commands from the normal text window :computer:
-2. Administrator commands from the Administrator console within the Meridian 59 client :computer:
-3. Administrator commands from the Server Administration Console on the server itself :computer:
-4. Commands sent through the maintenenance port (mostly used for automatic account management)
+There are 4 ways administrate Meridian 59
+1. the normal client text window
+2. the client administration console (shift+4)
+3. the server administration console on the server itself
+4. the maintenance port
+
+
+#### The Client Administration Console (shift+4)
 
 `shift+4` opens the administration console from the Meridian 59 client.\
 You must have permissions to do so.\
@@ -836,3 +829,13 @@ When making new a globe, use these numbers to determine which type of globe it i
 - Creating_Different_Items.pdf
 - Editing_Things_via_Hex.pdf
 
+### Attribution and Contributions :mega:
+- Aesica
+- Essun
+- Haven
+- Diggie
+- Mayhem
+- Toko
+- The creators and former administrators (Zaphod, etc)
+- Others (please let me know I will add you)
+- [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
