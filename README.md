@@ -38,6 +38,9 @@ example: `RID_TOS = 50`
 `RID_TOS` is the room string value to use with the `go` command\
 `50` is the equivalent room id (RID) used in other commands
 
+Note: You can alternatively use `go 50` (using the room id directly) instead of using the rid strings
+
+
 Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) for room values from the official Meridian 59 repository.
 
 ---
