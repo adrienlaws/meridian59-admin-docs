@@ -84,14 +84,14 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 
 ### Set Karma
 |Command||Notes|
-|:-||:-|
+|:-|:-|
 `dm good` | set karma +100
 `dm evil` | set karma -100
 `dm neutral` | set karma 0
 
 ### Actions
 |Command||Notes|
-|:-||:-|
+|:-|:-|
 `dm rumble `| shakes the screen in the area
 
 dm create item attribute attributenamehere
