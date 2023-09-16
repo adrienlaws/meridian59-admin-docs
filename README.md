@@ -5,11 +5,12 @@
 Contributions / PRs are welcome!
 ### Administration Methods
 
-There are 4 ways administrate Meridian 59
-1. the normal client text window
+There are 5 ways to run admin commands in Meridian 59
+1. the normal client text window area
 2. the client administration console (shift+4)
-3. the server administration console on the server itself
+3. the server administration console on the server itself (windows only - not on linux)
 4. the maintenance port
+5. using the 'load' command to run admin commands from a text file that the server reads in
 
 
 #### The Client Administration Console (shift+4)
