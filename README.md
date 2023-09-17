@@ -66,6 +66,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 ### DM Disguises
 |Command|Graphic|Notes|
 |:-|:-|:-|
+`dm disguise <name>`| | checks art archive, then NPCs, then monsters
 `dm anonymous`| |Removes the name from your character, but still appears in who list. Repeat the command to restore your name.
 `dm shadow`| ![Alt text](dm_shadow.png) | shadowform
 `dm stealth on` | | You are now in stealth mode.
@@ -98,10 +99,10 @@ dm create item attribute attributenamehere
 dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
 dm immortal (same as above)
 
-dm appeal off
-dm appeal on
-dm guest appeal off (probably defunct)
-dm guest appeal on (same)
+dm appeal off | You will now hear appeals.
+dm appeal on | You will no longer hear appeals.
+dm guest appeal off | You will no longer hear guest appeals. (probably defunct)
+dm guest appeal on | You will now hear guest appeals. (same)
 
 
 
