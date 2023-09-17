@@ -37,19 +37,19 @@ There are 3 levels of commands
 ### Create Lighting
 |Command|Graphic|Description
 |:-|:-:|:-|
-`dm place candle`|![Alt text](candle.png)|A beeswax candle burns brightly.
-`dm place candelabra`|![Alt text](candelabra.png)| An ornate brass five-candle stand.  The candles are flickering softly.
-`dm place brazier`|![Alt text](brazier.png)|The flame burns bright, offering welcome light to the surroundings.
-`dm place lamp`|![Alt text](lamp.png)|These lamps stand like silent sentinels.
-`dm place firepit`|![Alt text](firepit.png)|This small fire offers both light and warmth to the surrounding area.
-`dm place dynamic light` | ![Alt text](dynamic_light.png)| You are looking at an object
+`dm place candle`|![Alt text](images/candle.png)|A beeswax candle burns brightly.
+`dm place candelabra`|![Alt text](images/candelabra.png)| An ornate brass five-candle stand.  The candles are flickering softly.
+`dm place brazier`|![Alt text](images/brazier.png)|The flame burns bright, offering welcome light to the surroundings.
+`dm place lamp`|![Alt text](images/lamp.png)|These lamps stand like silent sentinels.
+`dm place firepit`|![Alt text](images/firepit.png)|This small fire offers both light and warmth to the surrounding area.
+`dm place dynamic light` | ![Alt text](images/dynamic_light.png)| You are looking at an object
 
 Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 ### Create Event Items - Totems, Signs, Relics
 |Command&nbsp;&nbsp;&nbsp; |Graphic|Description|
 |:-|:-:|:-|
-`dm totem`| ![Alt text](dm_totem.png)| This feathered totem is oft the objective of quests set upon mortals by the Bards of the world of Meridian.<br><br>The totem must be held when in possession, and is dropped when removed from use.
-`dm event sign`|![Alt text](dm_event_sign.png)| Creates a generic event sign
+`dm totem`| ![Alt text](images/dm_totem.png)| This feathered totem is oft the objective of quests set upon mortals by the Bards of the world of Meridian.<br><br>The totem must be held when in possession, and is dropped when removed from use.
+`dm event sign`|![Alt text](images/dm_event_sign.png)| Creates a generic event sign
 `dm relic 1`|![Alt text](images/relic_1.png)| This decorative piece of art was created for King Zarcos the 4th to be given to his wife on their wedding day.  Later, when Queen Joline was convicted of treason and exiled, the king ordered the heirloom destroyed because it reminded him of her. Apparently, the orders were not completely carried out.<br><br>Being one of a kind, this heirloom can not be carried in one's possession for very long or tucked away in a chest.|
 `dm relic 2`|![Alt text](images/relic_2.png)| Excavated during the construction of the palace of the dark Princess Venya'cyr, the Urn came quickly into her possession as a valued treasure.  Ancient rumors suggest the Urn is cursed.  The craftsmanship of this priceless relic comes from unknown origins, certainly predating the Meridian settlers.  An unusual presence prevents this object from being stored in a chest or held for very long.|
 `dm relic 3`|![Alt text](images/relic_3.png)| Antiquarians claim there only to be a few of the priceless Minjaka Vases left in existence.  These exquisitely mastered vases use to line the throne room of Castle Victoria during the Minjakan dynasty of explorers in the second century.<br><br>Being one of a kind, this vase can not be carried in one's possession for very long or tucked away in a chest.|
@@ -68,7 +68,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 |:-|:-|:-|
 `dm disguise <name>`| | checks art archive, then NPCs, then monsters
 `dm anonymous`| |Removes the name from your character, but still appears in who list. Repeat the command to restore your name.
-`dm shadow`| ![Alt text](dm_shadow.png) | shadowform
+`dm shadow`| ![Alt text](images/dm_shadow.png) | shadowform
 `dm stealth on` | | You are now in stealth mode.
 `dm stealth off`| | 
 `dm hidden` | You are hidden from mortal eyes.
