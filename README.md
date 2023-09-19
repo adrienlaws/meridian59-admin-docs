@@ -28,6 +28,12 @@ There are 3 levels of commands
 - DM
 - Admin
 
+
+### Key .kod files to check
+- admin.kod
+- dm.kod
+- system.kod
+
 ### DM Commands
 
 |Command|Notes|
@@ -73,6 +79,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm stealth off`| | 
 `dm hidden` | You are hidden from mortal eyes.
 `dm blank` | You are now blank.
+`dm human` | change back to human state
 `dm plain` | change back to normal form
 ### Create Monsters
 `dm monster <monstername>` | Example: "dm monster ant"
