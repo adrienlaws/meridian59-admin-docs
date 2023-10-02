@@ -103,7 +103,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 |Command|Notes|
 |:-|:-|
 `dm rumble `| shakes the screen in the area
-`dm create item attribute <attributenamehere>`
+`dm create item attribute <attributenamehere>` | You need to equip the weapon you wish to give an attribute to.  This command only works on weapons.
 `dm mortal` | (fun fact, you can do "s mortal" as well. was sloppily done)
 `dm immortal` | (same as above)
 `dm appeal off` | You will now hear appeals.
