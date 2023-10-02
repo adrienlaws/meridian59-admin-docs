@@ -24,15 +24,15 @@ You must be logged on as an admin to do so.
 ### Commands
 
 There are 3 levels of commands
-- Player
-- DM
-- Admin
+- `Player`
+- `DM`
+- `Admin`
 
 
 ### Key .kod files to check
-- admin.kod
-- dm.kod
-- system.kod
+- `admin.kod`
+- `dm.kod`
+- `system.kod`
 
 ### DM Commands
 
@@ -103,26 +103,24 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 |Command|Notes|
 |:-|:-|
 `dm rumble `| shakes the screen in the area
+`dm create item attribute <attributenamehere>`
+`dm mortal` | (fun fact, you can do "s mortal" as well. was sloppily done)
+`dm immortal` | (same as above)
+`dm appeal off` | You will now hear appeals.
+`dm appeal on` | You will no longer hear appeals.
+`dm guest appeal off` | You will no longer hear guest appeals. (probably defunct)
+`dm guest appeal on` | You will now hear guest appeals. (same)
+`dm clear abilities`
+`dm clear inventory`
+`dm get money` | creates 500,000 shillings
+`dm pk enable` | makes you attackable "You suddenly feel more vulnerable."
+`dm pk disable` | makes you un-attackable
+`dm monster budget` | checks what monster creation limits (if any) you have 
 
-dm create item attribute attributenamehere
-dm mortal (fun fact, you can do "s mortal" as well. was sloppily done)
-dm immortal (same as above)
-
-dm appeal off | You will now hear appeals.
-dm appeal on | You will no longer hear appeals.
-dm guest appeal off | You will no longer hear guest appeals. (probably defunct)
-dm guest appeal on | You will now hear guest appeals. (same)
-
-
-
-dm monster budget (???)
 dm monster authorize (???)
 dm none (???)
-dm clear abilities
-dm clear inventory
-dm get money | creates 500,000 shillings
-dm pk enable (makes you attackable)
-dm pk disable (makes you angeled I think?)
+
+
 dm pk lock (cannot attack/be attacked I think)
 dm pk unlock (removes pk lock)
 
@@ -130,8 +128,8 @@ dm call monster (unsure?  does it force room spawns?)
 
 dm human (same as above I think?)
 dm disguise ant (or other monster name)
-dm get items (you covered this)
-dm get `misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
+`dm get items`
+`dm get misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
 
 ---
 
