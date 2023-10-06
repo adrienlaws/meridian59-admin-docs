@@ -231,6 +231,14 @@ send o [object id] somethingchanged
 
 ---
 
+## Changing Server Settings
+Change max room rental length
+`show obj 0 (server settings)`
+
+look for `poRentableRoomMaintenance` = OBJECT 3504 (click show with this highlighted or just type show obj 3504)
+
+`piRentableDaysMax = INT 720`
+
 ## Lists
 There are two major data structures in use within Meridian 59\
 - Lisp-like nodes on the server
