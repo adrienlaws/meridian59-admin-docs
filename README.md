@@ -118,19 +118,14 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm pk enable` | makes you attackable "You suddenly feel more vulnerable."
 `dm pk disable` | makes you un-attackable
 `dm monster budget` | checks what monster creation limits (if any) you have 
-
-dm monster authorize (???)
-dm none (???)
-
-
-dm pk lock (cannot attack/be attacked I think)
-dm pk unlock (removes pk lock)
-
-dm call monster (unsure?  does it force room spawns?)
-
-dm human (same as above I think?)
-dm disguise ant (or other monster name)
-`dm get items`
+`dm monster authorize` | (???)
+`dm none` | (???)
+`dm pk lock` | (cannot attack/be attacked I think)
+`dm pk unlock` | (removes pk lock)
+`dm call monster` | (unsure?  does it force room spawns?)
+`dm human` | (same as above I think?)
+`dm disguise ant` | (or other monster name)
+`dm get items` 
 `dm get misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
 
 ---
