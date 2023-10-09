@@ -103,8 +103,6 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 |Command|Notes|
 |:-|:-|
 `dm rumble `| shakes the screen in the area for 500 ms (1/2 second)  If you want to shake the room for longer you can use the `rumble` message/function and send it to the room object like this `send object <room object #> rumble duration int 5000` To change the duration adjust the value of 5000
-
-
 `dm create item attribute <attributenamehere>` | You need to equip the weapon you wish to give an attribute to.  This command only works on weapons.
 `dm mortal` | (fun fact, you can do "s mortal" as well. was sloppily done)
 `dm immortal` | (same as above)
