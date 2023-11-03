@@ -994,3 +994,15 @@ When making new a globe, use these numbers to determine which type of globe it i
 - Zaphod
 - Others (please let me know I will add you)
 - [Official Meridian 59 documentation and repository](https://github.com/Meridian59/Meridian59)
+
+### Development Notes
+`%s`        Resources
+`%d` or `%i`  Numbers
+`%q`        Strings (use this for names)
+
+Where the %s etc appears in the resource string determines "#parm" it applies to:
+`"Hello, my name is %q, you killed my %q, prepare to %q!"`
+`#parm1="Inigo Montoya", #parm2="father", #parm3="die"`
+
+If you want to see an example of mixed types in the same resource string, look at the room key room maintenence kod file 
+
