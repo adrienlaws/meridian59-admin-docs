@@ -481,9 +481,30 @@ vamper | vamp
 acider | acid touch
 
 Color Item
-Black (int 44)
-Dark Green (int 37)
-Crimson splash (int 42)
+To change an item's color
+select the item through the administrator console (as you did to set piHits and piHits_init)
+Double click on the piItem_flags value
+Select Integer and type in a numerical value
+
+These I believe are from 
+kod\include\blakston.khd
+
+But the values in that file are hex format.  So you can use a web based hex to binary converter for color combinations
+![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/853653c7-c72c-4dfa-b65c-01c8f5b90912)
+
+Or here are some that I've used for testing that I know.  Color names are mine, not official by any means.
+use int values
+seaweed green = 83
+sky blue = 22
+crimson red = 33
+black = 44
+dark green = 37
+crimson splash =  42
+
+To have the item "refresh" the easiest way is to log out and in again really quickly. 
+
+
+
 
 ### use xlat to create new content
 open blakston.khd and look for the xlat list.  they'll say stuff like XLAT_GRAY_TO_??? or XLAT_BLUE_TO_??? so you just look at the thing you're trying to recolor and make sure the color shown matches the graphic you're trying to recolor
