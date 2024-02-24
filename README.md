@@ -480,7 +480,7 @@ fire | tof
 vamper | vamp
 acider | acid touch
 
-Color Item
+### Color Items
 To change an item's color
 select the item through the administrator console (as you did to set piHits and piHits_init)
 Double click on the piItem_flags value
