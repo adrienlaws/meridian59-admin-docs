@@ -494,12 +494,15 @@ But the values in that file are hex format.  So you can use a web based hex to b
 
 Or here are some that I've used for testing that I know.  Color names are mine, not official by any means.
 use int values
-seaweed green = 83
-sky blue = 22
-crimson red = 33
-black = 44
-dark green = 37
-crimson splash =  42
+color | int value
+|:-|:-|
+seaweed green | 83
+dark green | 37
+sky blue | 22
+crimson red | 33
+crimson splash | 42
+black | 44
+
 
 To have the item "refresh" the easiest way is to log out and in again really quickly. 
 
