@@ -124,7 +124,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm human` | (same as above I think?)
 `dm disguise ant` | (or other monster name)
 `dm get items` 
-`dm get misc|gems|reagents|food|weapons|armor|ammo|wands|rings|sundries|games|necklaces|potions|scrolls|wands|masks`
+`dm get` | misc, gems reagents food weapons armor ammo wands rings sundries games necklaces potions scrolls wands masks
 
 ---
 
