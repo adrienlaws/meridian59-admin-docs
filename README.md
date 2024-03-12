@@ -42,6 +42,55 @@ There are 3 levels of commands
 `getplayer <playername>` | bring a player to you - use in normal command bar
 `goplayer <player name>` | go to a player - normal command bar
 
+### Example: Creating an Object and Moving it
+`create object sign`
+output
+> Created object 6162.
+
+`show object 6162`
+output
+> show o 6162
+:< OBJECT 6162 is CLASS Sign
+: self                 = OBJECT 6162
+: poOwner              = $ 0
+: vrName               = RESOURCE sign_name_rsc
+: vrIcon               = RESOURCE sign_icon_rsc
+: vrDesc               = RESOURCE sign_desc_rsc
+: vrInsc               = RESOURCE sign_insc_rsc
+:>
+
+Note `poOwner` is set to 0
+we need to move it to our current room
+
+check your own room by checking the owner
+![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/301b26af-c362-4067-8b14-57a632fcf0db)
+
+In this case the room object we are in is `2005`
+
+Make the room the owner of the object
+`send o (object of what room you are in) newhold what o (what you just made)`
+`send o 2005 newhold what o 6162`
+
+output
+> :< return from OBJECT 2005 MESSAGE NewHold (10022)
+: $ 0
+:>
+
+Null output, no errors means it worked.
+`show object 6162` in the admin console
+click on "move" to bring up the admin move object dialog
+![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/8fbaef5c-e5da-4472-9a4c-8f9fcb47308e)
+
+Move it to xy 20 20 in Raza to move it inside the pond for example
+You can also do this via a command
+`send object 2005 somethingmoved what object 6162 new_row int 20 new_col int 20 fine_row int 32 fine_col int 32`
+
+
+
+
+
+
+
 ### Create Lighting
 |Command|Graphic|Description
 |:-|:-:|:-|
