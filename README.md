@@ -88,8 +88,23 @@ You can also do this via a command
 
 
 
+### Common Issues
 
+> I changed loot tables, but the loot hasn't changed.  For testing purposes, I decided to do something obvious and make the giant rats drop Mystic Swords.  I changed the TID_RAT table (rattres.kod) to the following:
+```
+   constructed()
+   {
+      plTreasure = [  [ &MysticSword, 100 ] ];
 
+      propagate;
+   }
+```
+> When I kill giant rats, they still drop herbs, mushrooms, etc, but no Mystic Swords.  Is there something obvious I'm missing? 
+
+Solution
+- Rebuild the Blakod and then tell the server to load the new compiled code
+- Treasure type objects are created once and stored, so you also need to recreate them: 
+`send object 0 RecreateAllTreasureTypes` from admin mode
 
 ### Create Lighting
 |Command|Graphic|Description
