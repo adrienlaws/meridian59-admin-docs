@@ -764,6 +764,10 @@ Give Player Permanant HP Boost:
 ```
 send object <playerobject#> GainBaseMaxHealth amount int <HPamount>
 ```
+Re-evaluate Player PK status (can they be killed) - use after HP boost:
+```
+send object <playerobject#> EvaluatePKStatus
+```
 Permanently Bond Player to a Mana Node:
 ```
 send o <mananode#> meld who o <playerobject#>
