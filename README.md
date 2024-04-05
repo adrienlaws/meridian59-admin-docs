@@ -1098,3 +1098,18 @@ Where the %s etc appears in the resource string determines "#parm" it applies to
 
 If you want to see an example of mixed types in the same resource string, look at the room key room maintenence kod file 
 
+### Common Development Questions
+
+> What are the "warnings" regarding "externals" when first using the "make" command to compile the server?
+
+An "external" is a reference to a symbol in a file that is not defined in that file.  
+
+This usually means the name of a class or method that is from another file.  In C++, the compiler can find external references using header files and #include; in Java, there is an enforced mapping of class names and filenames so that the compiler can find them.  
+
+At the time of the original codebase's creation, looking stuff up in external files would have been very slow (like it is in C++).  
+
+The workaround was the `kodbase.txt` file, which lists external references that the compiler has seen when compiling other files.  As more files are encountered, the count of external references stored in `kodbase.txt` initially goes up, then it goes down, until by the time the last file is encountered, there should be none left.  
+
+But the compiler doesn't know what the "last file" is, so all it can do is tell you that there some remaining external references.  At startup the server will complain if there are any remaining external references in `kodbase.txt`.
+
+
