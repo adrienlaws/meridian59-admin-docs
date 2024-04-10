@@ -529,7 +529,7 @@ vamper | vamp weap
 twister | GMT
 transcendant | soft white light
 bonker | bonk weap
-expert | random justice weaponon, can be weak or good, its random
+expert | random justice weapon, can be weak or good, its random
 spellcasters <name> | makes weapon special, example 'spellcasters acid'
 durable | more durable
 duke | duke
@@ -537,7 +537,6 @@ cold | icy
 shock | zap
 twister | gmt
 punisher | justice weapon
-transcendant | Soft white light
 paralyzer | hold
 blinder | blind
 fire | tof
