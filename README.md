@@ -1054,6 +1054,27 @@ When making new a globe, use these numbers to determine which type of globe it i
  NID_MAR_HALL | 24
  NID_KOC_HALL | 24
 
+#### General Admin Commands
+Use these commands from the administrator console
+
+Create Administrator Account
+```
+create account admin <username> <password>
+```
+
+Create Bard or DM account
+```
+create account DM <username> <password>
+```
+
+Create Player Account
+```
+create account user <username> <password>
+```
+These create the accounts but now you must add character slots to them
+
+
+
 ### Reference
 - Admin_Name_Colours.pdf
 - Character_Building.pdf
