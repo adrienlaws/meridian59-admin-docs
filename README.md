@@ -143,10 +143,10 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm shadow`| ![Alt text](images/dm_shadow.png) | shadowform
 `dm stealth on` | | You are now in stealth mode.
 `dm stealth off`| | 
-`dm hidden` | You are hidden from mortal eyes.
-`dm blank` | You are now blank.
-`dm human` | change back to human state
-`dm plain` | change back to normal form
+`dm hidden` | | You are hidden from mortal eyes.
+`dm blank` | | You are now blank.
+`dm human` | | change back to human state
+`dm plain` | | change back to normal form
 ### Create Monsters
 `dm monster <monstername>` | Example: "dm monster ant"
 ### Configure Logoff Ghosts and Penalties
