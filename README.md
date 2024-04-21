@@ -567,7 +567,10 @@ crimson splash | 42
 black | 44
 
 
-To have the item "refresh" the easiest way is to log out and in again really quickly. 
+To have the item "refresh" the easiest way is to use the command
+```
+reset
+```
 
 
 
