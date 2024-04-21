@@ -1118,9 +1118,9 @@ Where the %s etc appears in the resource string determines "#parm" it applies to
 
 If you want to see an example of mixed types in the same resource string, look at the room key room maintenence kod file 
 
-### Common Development Questions
+### Common Development Questions (FAQ)
 
-> What are the "warnings" regarding "externals" when first using the "make" command to compile the server?
+#### What are the "warnings" regarding "externals" when first using the "make" command to compile the server?
 
 An "external" is a reference to a symbol in a file that is not defined in that file.  
 
@@ -1131,5 +1131,9 @@ At the time of the original codebase's creation, looking stuff up in external fi
 The workaround was the `kodbase.txt` file, which lists external references that the compiler has seen when compiling other files.  As more files are encountered, the count of external references stored in `kodbase.txt` initially goes up, then it goes down, until by the time the last file is encountered, there should be none left.  
 
 But the compiler doesn't know what the "last file" is, so all it can do is tell you that there some remaining external references.  At startup the server will complain if there are any remaining external references in `kodbase.txt`.
+
+####  I'm getting encoding issues... for example my code changed from `#define PAGE_BREAK_CHAR '�'      /* For multi-page descriptions */` to `#define PAGE_BREAK_CHAR '¶'      /* For multi-page descriptions * `\  How do I fix this?
+
+Make sure you are using Windows 1252 as your encoding.  Visual Studio Code will for example use `UTF-8` as the default encoding.
 
 
