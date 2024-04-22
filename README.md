@@ -610,23 +610,22 @@ DM Zandramas, in your infinite wisdom, please make me important.
 ---
 
 Yellow Game Creator Name:
-In the $ Menu type:
 ```
-create o 
+create o creator
 ```
-<Copy the creators Object number it gives you>
+Copy the creators Object number it gives you
 ```
-create resource <New Name>
+create resource NewName
 ```
-<Copy the Resource number it gives you>
+Copy the Resource number it gives you
 ```
-set o <creatorobject#> vrname resource <resource#>
+set o creatorobject# vrname resource resource#
 create account admin USERNAME PASSWORD
 ```
 (If you want to apply this to a new account, if not skip to the next step and use a different account #)
-<Copy the Account Number it gives you>
+Copy the Account Number it gives you
 ```
-set account o <account#> <creatorobject#>
+set account o account# creatorobject#
 ```
 
 ---
