@@ -67,14 +67,14 @@ check your own room by checking the owner
 
 In this case the room object we are in is `2005`
 
-Make the room the owner of the object
-`send o (object of what room you are in) newhold what o (what you just made)`
+Make the room the owner of the object\
+`send o (object of what room you are in) newhold what o (what you just made)`\
 `send o 2005 newhold what o 6162`
-
-output
-> :< return from OBJECT 2005 MESSAGE NewHold (10022)
+```
+:< return from OBJECT 2005 MESSAGE NewHold (10022)
 : $ 0
 :>
+```
 
 Null output, no errors means it worked.
 `show object 6162` in the admin console
