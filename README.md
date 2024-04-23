@@ -44,12 +44,11 @@ There are 3 levels of commands
 
 ### Example: Creating an Object and Moving it
 `create object sign`
-output
 > Created object 6162.
 
 `show object 6162`
-output
 > show o 6162
+```
 :< OBJECT 6162 is CLASS Sign
 : self                 = OBJECT 6162
 : poOwner              = $ 0
@@ -58,6 +57,7 @@ output
 : vrDesc               = RESOURCE sign_desc_rsc
 : vrInsc               = RESOURCE sign_insc_rsc
 :>
+```
 
 Note `poOwner` is set to 0
 we need to move it to our current room
