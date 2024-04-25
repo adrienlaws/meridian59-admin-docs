@@ -47,7 +47,6 @@ There are 3 levels of commands
 > Created object 6162.
 
 `show object 6162`
-> show o 6162
 ```
 :< OBJECT 6162 is CLASS Sign
 : self                 = OBJECT 6162
@@ -68,15 +67,15 @@ check your own room by checking the owner
 In this case the room object we are in is `2005`
 
 Make the room the owner of the object\
-`send o (object of what room you are in) newhold what o (what you just made)`\
-`send o 2005 newhold what o 6162`
+`send object (object of what room you are in) newhold what object (what you just made)`\
+`send object 2005 newhold what object 6162`
 ```
 :< return from OBJECT 2005 MESSAGE NewHold (10022)
 : $ 0
 :>
 ```
 
-Null output, no errors means it worked.
+Null output, no errors means it worked.\
 `show object 6162` in the admin console
 click on "move" to bring up the admin move object dialog
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/8fbaef5c-e5da-4472-9a4c-8f9fcb47308e)
