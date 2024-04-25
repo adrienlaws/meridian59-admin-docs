@@ -80,8 +80,8 @@ Null output, no errors means it worked.\
 click on "move" to bring up the admin move object dialog
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/8fbaef5c-e5da-4472-9a4c-8f9fcb47308e)
 
-Move it to xy 21 42 in Raza to move it near the blink spot for example
-You can also do this via a command
+Move it to xy 21 42 in Raza to move it near the blink spot for example\
+You can also do this via a command\
 `send object 2005 somethingmoved what object 6162 new_row int 20 new_col int 20 fine_row int 32 fine_col int 32`
 
 
@@ -147,6 +147,8 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm human` | | change back to human state
 `dm plain` | | change back to normal form
 ### Create Monsters
+|Command|Notes|
+|:-|:-|
 `dm monster <monstername>` | Example: "dm monster ant"
 ### Configure Logoff Ghosts and Penalties
 |Command|Notes|
