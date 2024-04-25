@@ -263,8 +263,8 @@ Refresh the state of an object\
 ---
 
 ## Changing Server Settings
-Change max room rental length
-`show obj 0 (server settings)`
+Change max room rental length\
+`show object 0` (server settings)
 
 look for `poRentableRoomMaintenance` = OBJECT 3504 (click show with this highlighted or just type show obj 3504)
 
@@ -276,13 +276,13 @@ There are two major data structures in use within Meridian 59\
 - Linked-lists in the client
 
 ### Viewing lists and list-nodes
-Show a list and walk all the nodes (see everything in the list)
+Show a list and walk all the nodes (see everything in the list)\
 ```show list <listid>```
 
-Show a node in the list
+Show a node in the list\
 ```show listnode <nodeid>```
 
-Example showing the monsters that spawn at the main gate of cor noth on my test server
+Example showing the monsters that spawn at the main gate of cor noth on my test server\
 ```show list 23294```
 
 OUTPUT
@@ -301,7 +301,7 @@ OUTPUT
 :>
 ```
 
-Now seeing it with `show listnode` instead of `list`
+Now seeing it with `show listnode` instead of `list`\
 ```show listnode 23294```
 
 OUTPUT
