@@ -193,11 +193,8 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 
 ---
 
-Go to a specific room
-
-```
-go <room string>
-```
+Go to a specific room\
+`go <room string>`
 Example: `go rid_tos`
 
 The room string value is from `blakston.khd`\
@@ -213,10 +210,8 @@ Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f8
 
 ---
 
-Send an object to a specific room id
-```
-send object <object number> teleportto rid int <room id>
-```
+Send an object to a specific room id\
+`send object <object number> teleportto rid int <room id>`
 Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) for the room id (RID) values from the official Meridian 59 repository.
 
 
@@ -228,29 +223,20 @@ admin command reference
 
 
 Start tour of all rooms
-```
-dm start tour
-```
+`dm start tour`
 
 Stop tour
-```
-dm end tour
-```
+`dm end tour`
 
 Populate map of current room
-
-```
-show map
-```
+`show map`
 
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/e19a9613-5744-44c1-a0f9-0933d18cde16)
 
 ---
 
 Get spells or skills
-```
 dm get spells
-```
 ```
 dm get skills
 ```
