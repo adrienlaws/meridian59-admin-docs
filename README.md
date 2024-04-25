@@ -44,7 +44,7 @@ There are 3 levels of commands
 
 ### Example: Creating an Object and Moving it
 `create object sign`
-```Created object 6162.```
+> Created object 6162.
 
 `show object 6162`
 ```
