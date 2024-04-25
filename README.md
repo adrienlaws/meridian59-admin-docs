@@ -217,61 +217,48 @@ Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f8
 
 ---
 
-admin command reference
+admin command reference\
 `kod\object\active\holder\nomoveon\battler\player\user\dm\admin.kod`
 
 
 
-Start tour of all rooms
+Start tour of all rooms\
 `dm start tour`
 
-Stop tour
+Stop tour\
 `dm end tour`
 
-Populate map of current room
+Populate map of current room\
 `show map`
 
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/e19a9613-5744-44c1-a0f9-0933d18cde16)
 
 ---
 
-Get spells or skills
-dm get spells
-```
-dm get skills
-```
+Get spells or skills\
+`dm get spells`
+`dm get skills`
 
 ---
 
-Boost stats
-```
-dm boost stats
-```
+Boost stats\
+`dm boost stats`
 
 ---
 
-Create monsters
-```
-dm create [monster name]
-```
-
----
-
-Room Monster Rates
+Room Monster Rates\
 Mob spawns have 3 controls
 
-   `piMonster_count_max` = 30 
-    `piInit_count_min` = 5 
+   `piMonster_count_max` = 30 \
+    `piInit_count_min` = 5 \
     `piInit_count_max` = 10
     
 This means the room will have 5-10 mobs when u user enters it and will spawn up to 30
 
 ---
 
-Refresh the state of an object
-```
-send o [object id] somethingchanged
-```
+Refresh the state of an object\
+`send o [object id] somethingchanged`
 
 ---
 
