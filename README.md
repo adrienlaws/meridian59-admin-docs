@@ -513,7 +513,10 @@ crimson splash | 42
 black | 44
 
 
-To have the item "refresh" the easiest way is to log out and in again really quickly. 
+To have the item "refresh" the easiest way is to use the command
+```
+reset
+```
 
 
 
@@ -547,6 +550,7 @@ or use the DM command:\
 ---
 
 Yellow Game Creator Name:\
+
 In the $ Menu type:\
 `create object creator`\
 Copy the creators Object number it gives you\
@@ -931,5 +935,8 @@ But the compiler doesn't know what the "last file" is, so all it can do is tell 
 ####  I'm getting encoding issues... for example my code changed from `#define PAGE_BREAK_CHAR '�'      /* For multi-page descriptions */` to `#define PAGE_BREAK_CHAR '¶'      /* For multi-page descriptions * `\  How do I fix this?
 
 Make sure you are using Windows 1252 as your encoding.  Visual Studio Code will for example use `UTF-8` as the default encoding.
+
+#### What do the item attribute numbers mean?  How do they fit into the plItem_Attributes list?
+If an item's plItem_Attributes list is not $ (null or nonexistent), then it will be populated by a list.  In that list, you will see linked elements.  Something like this `[[WA, timer, identified], [group2], [group3], etc]`.  The compound or first value (for example 6501) is a combination of different sets.  The first number (farthest to the left) is the item attribute value.  65 in this case is WA_BLINDER or a blind weapon.  The next value will be the timer or how long the attribute will remain on the item.  This is used for enchantments.  Most magic weapons have this value as 0.  The final value you should just know if it is even or odd.  If it is even then the item attribute is not identified.  If it is odd, then the item attribute is identified.  Note that this is just one attribute and items can have many.  If you want to know if all attributes are visible or identified you must walk the list.  I have tried to create a function IsIdentified() that does this.
 
 
