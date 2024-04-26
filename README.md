@@ -47,7 +47,7 @@ There are 3 levels of commands
 OUTPUT: `Created object 6162.`
 
 `show object 6162`\
-OUTPUT:\
+OUTPUT:
 ```
 :< OBJECT 6162 is CLASS Sign
 : self                 = OBJECT 6162
@@ -70,7 +70,7 @@ In this case the room object we are in is `2005`
 Make the room the owner of the object\
 `send object (object of what room you are in) newhold what object (what you just made)`\
 `send object 2005 newhold what object 6162`\
-OUTPUT:\
+OUTPUT:
 ```
 :< return from OBJECT 2005 MESSAGE NewHold (10022)
 : $ 0
@@ -286,7 +286,7 @@ Show a node in the list\
 
 Example showing the monsters that spawn at the main gate of cor noth on my test server\
 ```show list 23294```\
-OUTPUT:\
+OUTPUT:
 ```
 :<
 : [
@@ -304,7 +304,7 @@ OUTPUT:\
 
 Now seeing it with `show listnode` instead of `list`\
 ```show listnode 23294```\
-OUTPUT:\
+OUTPUT:
 ```
 :< first = LIST 23290
 :  rest = LIST 23293
@@ -316,7 +316,7 @@ When we look at the node we see that per the documentation on Cons https://en.wi
 
 Now let's see what's in listnode `23290`\
 `show listnode 23290`\
-OUTPUT:\
+OUTPUT:
 ```
 :< first = CLASS SpiderBaby
 :  rest = LIST 23289
@@ -325,7 +325,7 @@ OUTPUT:\
 
 Checking the 23289 listnode in the `rest`\
 `show listnode 23289`\
-OUTPUT:\
+OUTPUT:
 ```
 :< first = INT 75
 :  rest = $ 0
@@ -492,7 +492,7 @@ acider | acid touch
 To change an item's color
 select the item through the administrator console (as you did to set piHits and piHits_init)\
 Double click on the piItem_flags value\
-Select Integer and type in a numerical value\
+Select Integer and type in a numerical value
 
 These I believe are from \
 kod\include\blakston.khd
@@ -541,7 +541,7 @@ iCombinedColor = Send(SYS, @EncodeTwoColorXlat, #color1=AAA, #color2=BBB);
 
 ### Admin Name Colors
 Green Bard/Admin Name:\
-`set o <playerobj#> pbImmortal INT 2`
+`set o <playerobj#> pbImmortal INT 2`\
 or use the DM command:\
 `DM Zandramas, in your infinite wisdom, please make me important.`
 ---
