@@ -541,22 +541,21 @@ iCombinedColor = Send(SYS, @EncodeTwoColorXlat, #color1=AAA, #color2=BBB);
 
 ### Admin Name Colors
 Green Bard/Admin Name:\
-`set o <playerobj#> pbImmortal INT 2`
-
+`set o <playerobj#> pbImmortal INT 2`\
 or use the DM command:\
-`DM Zandramas, in your infinite wisdom, please make me important.`
+`DM Zandramas, in your infinite wisdom, please make me important.`\
 ---
 
 Yellow Game Creator Name:\
 In the $ Menu type:\
 `create o creator`\
-<Copy the creators Object number it gives you>\
+Copy the creators Object number it gives you\
 `create resource <New Name>`\
-<Copy the Resource number it gives you>\
+Copy the Resource number it gives you\
 `set o <creatorobject#> vrname resource <resource#>`\
 `create account admin USERNAME PASSWORD`\
 (If you want to apply this to a new account, if not skip to the next step and use a different account #)\
-<Copy the Account Number it gives you>\
+Copy the Account Number it gives you\
 `set account o <account#> <creatorobject#>`
 
 ---
@@ -583,35 +582,49 @@ versa, so just experiment with other things that aren't listed here.\
 
 Single Skills:\
 `send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here`\
+
 Single Spells:\
 `send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here`\
+
 Give Player Defined Weaponcraft Skills at certain level and %:\
 `send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>`\
+
 Give Player Defined Spell School at certain level and %:\
 `send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>`\
+
 Give Player all Weaponcraft Skills:\
 `send o <playerobject#> giveplayerallskills`\
+
 Give Player all Regular Spells:\
 `send o <playerobject#> giveplayerallspells`\
+
 Give Player Single Spell Schools:\
 `send o <playerobject#> giveplayerallspells school int SS_<schoolname>`\
+
 Remove all spells/skills:\
 `send o <playerobj#> removeallskills`\
 `send o <playerobj#> removeallspells`\
+
 Remove Single Spells:\
 `send o <playerobj#> RemoveSpell num int <spell#> isDM int <1 or 0>`\
 Note: (The isDM int <1 or 0> part isn't always required)\
+
 Remove Single Skills:\
 `send o <playerobj#> RemoveSkill num int <skill#>`\
+
 Remove Inaccesable Spells:\
 `send o <playerobj#> RemoveInaccessibleSpells`\
+
 Clear all spells:\
 `send o <playerobj#> ClearSpellList`\
+
 Clear single schools:\
 These don't seem to work\
 `send o <PlayerObj#> StripSpellsOfSchool school int <School#>`\
+
 Add to spell to other schools:\
 `send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>`\
+
 School Numbers:
 |School|Number|
 |:-|:-|
@@ -627,57 +640,81 @@ Infinite Inventory and stomach:\
 `set object <PlayerObj#> piBulk_hold $ 0`\
 `set object <PlayerObj#> piWeight_hold $ 0`\
 `set object <PlayerObj#> piStomach $ 0`\
+
 Bio Inscription:\
 `send o <playerobject#> sethonorstring string quote <message>`\
+
 Give Player Permanant HP Boost:\
 `send object <playerobject#> GainBaseMaxHealth amount int <HPamount>`\
+
 Re-evaluate Player PK status (can they be killed) - use after HP boost:\
 `send object <playerobject#> EvaluatePKStatus`\
+
 Permanently Bond Player to a Mana Node:\
 `send o <mananode#> meld who o <playerobject#>`\
+
 Permanently Bond Player to Every Mana Node:\
 `send c mananode meld who o <playerobject#>`\
+
 Boost a Players Might Permanently:\
 `send o <playerobject#> AddMight points int <#ofpoints>`\
+
 Boost a Players Intellect Permanently:\
 `send o <playerobject#> AddIntellect points int <#ofpoints>`\
+
 Boost a Players Stamina Permanently:\
 `send o <playerobject#> AddStamina points int <#ofpoints>`\
+
 Boost a Players Aim Permanently:\
 `send o <playerobject#> AddAim points int <#ofpoints>`\
+
 Boost a Players Agility Permanently:\
 `send o <playerobject#> AddAgility points int <#ofpoints>`\
+
 Boost a Players Mysticism Permanently:\
 `send o <playerobject#> AddMysticism points int <#ofpoints>`\
+
 Give Penalties to a Log Off Ghost:\
 `send object <logoffobject#> InflictPenalties`\
 #### Global Character Building
 Give Every Player all Skills (even offline users) :\
 `send c user giveplayerallskills`\
+
 Give Every Player Single Skills (even offline users) :\
 `send c user adminsetskill num int <skill#> ability int <%ofskill>`\
+
 Give Every Player Single Spells (even offline users):\
 `send c user adminsetspell num int <spell#> ability int <%ofspell>`\
+
 Bio Inscription for All Players (even offline users) :\
 `send c user sethonorstring string quote <message>`\
+
 Change everyones karma:\
 `send class <player#> addkarma amount <KarmaAmount>`\
 (set amount to $ 0 to make it nil)\
+
 Rescue all players:\
 `send c user admingotosafety`\
+
 Give All Players a Temporary HP Boost:\
 `send c player GainHealth amount int <#ofhps>`\
+
 Permanantly Bond Every Player to a Mana Node:\
 `send o <mananode#> meld who c user`\
+
 Permanantly Bond Every Player to Every Mana Node:\
 `send c mananode meld who c user`\
+
 Give All Players Mana Boost Semi-Permanant:\
 `send c user GainMana amount int <ManaAmount>`\
 (ao3/soth/node restores default mana)\
+
 Boost All Players Vigor to 200 (works like eating something):\
 `send c user EatSomething filling int 0 nutrition int 200`\
+
 Give Every Player Single Spell Schools (even offline users):\
 `send o <playerobject#> giveplayerallspells school int SS_<schoolname>`\
+
 Give Every Player all Spells (even offline users) :\
 `send c user GivePlayerAllSpells level INT 6`\
 (You can also put 7 to give the player the slitherbolt spell also)
@@ -686,37 +723,23 @@ Give Every Player all Spells (even offline users) :\
 ### Creating Different Items
 
 Place dynamic light\
-only usable by administrator and up
-```
-dm place dynamic light
-```
+only usable by administrator and up\
+`dm place dynamic light`\
 
-there's a dm place dynamic light too - only usable by administrator and up though
-```
-dm place candle
-```
+`dm place candle`\
 
-```
-dm place candelabra
-```
+`dm place candelabra`\
 
-```
-dm place brazier
-```
+`dm place brazier`\
 
 Create Statues:\
 First create a statue somewhere:
-```
-Create o statue
-```
-Then in the $ menu type:
-```
-show instance statue
-```
-Look for the last object number it shows then type:
-```
-show o <laststatueobject#>
-```
+`create o statue`\
+Then in the $ menu type:\
+`show instance statue`\
+Look for the last object number it shows then type:\
+`show o <laststatueobject#>`\
+
 Then the first thing you should edit is the Weapon and Shield lines to Nil.\
 Otherwise if someone enters the room or you type reset then the room the statue is in will freeze up.\
 Now you can edit the statues Toupee, Head, Eyes, Arms, etc to the same as whatever it is in the
@@ -724,44 +747,19 @@ character you want the statue of same lines in the $ menu.\
 After you've done that change the poOriginal line to the Character you want the statue to be of Object#
 Statue Editing Info and Poses.
 
-Create Signs:
-First either Buy or Create a "Junk" class item that Pacal sells.
-Then edit the change the vrName and vrIcon lines to:
-sign_name_rsc and sign_icon_rsc
-Then in the $ menu type:
-```
-Create resource <sign description>
-```
+Create Signs:\
+First either Buy or Create a "Junk" class item that Pacal sells.\
+Then edit the change the vrName and vrIcon lines to:\
+sign_name_rsc and sign_icon_rsc\
+Then in the $ menu type:\
+`create resource <sign description>`\
 and then edit the vrDesc to the resource number you get.\
 Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it won't disappear.\
 
-Here's a list of different signs you can use on Junk Items:
-Normal Sign:
-```
-sign_name_rsc
-```
-
-```
-sign_icon_rsc
-```
-
-Raza Sign:
-```
-sign_name_rsc
-```
-
-```
-sign_newbie_icon_rsc
-```
-
-Assassin Game Sign:
-```
-sign_name_rsc
-```
-
-```
-assassinsign_name_rsc
-```
+Here's a list of different signs you can use on Junk Items:\
+|Normal Sign|sign_name_rsc|sign_icon_rsc|
+|Raza Sign|sign_name_rsc|sign_newbie_icon_rsc|
+|Assassin Game Sign|sign_name_rsc|assassinsign_name_rsc|
 
 (Not all Junk items that Pacal sells works with this always.\
 Books and Glass Pendants seem to work good every time. Try changing the `vrIcon` line first)
