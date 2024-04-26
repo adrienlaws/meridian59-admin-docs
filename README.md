@@ -238,7 +238,7 @@ Populate map of current room\
 ---
 
 Get spells or skills\
-`dm get spells`
+`dm get spells`\
 `dm get skills`
 
 ---
