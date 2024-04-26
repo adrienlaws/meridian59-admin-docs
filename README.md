@@ -475,7 +475,7 @@ twister | GMT
 transcendant | soft white light
 bonker | bonk weap
 expert | random justice weapon, can be weak or good, its random
-spellcasters <name> | makes weapon special, example 'spellcasters acid'
+spellcasters name | makes weapon special, example 'spellcasters acid'
 durable | more durable
 duke | duke
 cold | icy
@@ -541,9 +541,9 @@ iCombinedColor = Send(SYS, @EncodeTwoColorXlat, #color1=AAA, #color2=BBB);
 
 ### Admin Name Colors
 Green Bard/Admin Name:\
-`set o <playerobj#> pbImmortal INT 2`\
+`set o <playerobj#> pbImmortal INT 2`
 or use the DM command:\
-`DM Zandramas, in your infinite wisdom, please make me important.`\
+`DM Zandramas, in your infinite wisdom, please make me important.`
 ---
 
 Yellow Game Creator Name:\
@@ -573,7 +573,7 @@ Yellow Name Only Quick Disguses:\
 `DM cow`\
 `DM spider`\
 `DM troll`\
-`DM shadow`\
+`DM shadow`
 ### Character Building
 
 Single Character Building\
@@ -581,49 +581,49 @@ NOTE: Nearly all Send o commands can be done globally as well with a Send c user
 versa, so just experiment with other things that aren't listed here.\
 
 Single Skills:\
-`send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here`\
+`send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here`
 
 Single Spells:\
-`send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here`\
+`send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here`
 
 Give Player Defined Weaponcraft Skills at certain level and %:\
-`send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>`\
+`send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>`
 
 Give Player Defined Spell School at certain level and %:\
-`send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>`\
+`send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>`
 
 Give Player all Weaponcraft Skills:\
-`send o <playerobject#> giveplayerallskills`\
+`send o <playerobject#> giveplayerallskills`
 
 Give Player all Regular Spells:\
-`send o <playerobject#> giveplayerallspells`\
+`send o <playerobject#> giveplayerallspells`
 
 Give Player Single Spell Schools:\
-`send o <playerobject#> giveplayerallspells school int SS_<schoolname>`\
+`send o <playerobject#> giveplayerallspells school int SS_<schoolname>`
 
 Remove all spells/skills:\
 `send o <playerobj#> removeallskills`\
-`send o <playerobj#> removeallspells`\
+`send o <playerobj#> removeallspells`
 
 Remove Single Spells:\
 `send o <playerobj#> RemoveSpell num int <spell#> isDM int <1 or 0>`\
-Note: (The isDM int <1 or 0> part isn't always required)\
+Note: (The isDM int <1 or 0> part isn't always required)
 
 Remove Single Skills:\
-`send o <playerobj#> RemoveSkill num int <skill#>`\
+`send o <playerobj#> RemoveSkill num int <skill#>`
 
 Remove Inaccesable Spells:\
-`send o <playerobj#> RemoveInaccessibleSpells`\
+`send o <playerobj#> RemoveInaccessibleSpells`
 
 Clear all spells:\
-`send o <playerobj#> ClearSpellList`\
+`send o <playerobj#> ClearSpellList`
 
 Clear single schools:\
 These don't seem to work\
-`send o <PlayerObj#> StripSpellsOfSchool school int <School#>`\
+`send o <PlayerObj#> StripSpellsOfSchool school int <School#>`
 
 Add to spell to other schools:\
-`send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>`\
+`send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>`
 
 School Numbers:
 |School|Number|
@@ -639,81 +639,81 @@ Jala|6
 Infinite Inventory and stomach:\
 `set object <PlayerObj#> piBulk_hold $ 0`\
 `set object <PlayerObj#> piWeight_hold $ 0`\
-`set object <PlayerObj#> piStomach $ 0`\
+`set object <PlayerObj#> piStomach $ 0`
 
 Bio Inscription:\
-`send o <playerobject#> sethonorstring string quote <message>`\
+`send o <playerobject#> sethonorstring string quote <message>`
 
 Give Player Permanant HP Boost:\
-`send object <playerobject#> GainBaseMaxHealth amount int <HPamount>`\
+`send object <playerobject#> GainBaseMaxHealth amount int <HPamount>`
 
 Re-evaluate Player PK status (can they be killed) - use after HP boost:\
-`send object <playerobject#> EvaluatePKStatus`\
+`send object <playerobject#> EvaluatePKStatus`
 
 Permanently Bond Player to a Mana Node:\
-`send o <mananode#> meld who o <playerobject#>`\
+`send o <mananode#> meld who o <playerobject#>`
 
 Permanently Bond Player to Every Mana Node:\
-`send c mananode meld who o <playerobject#>`\
+`send c mananode meld who o <playerobject#>`
 
 Boost a Players Might Permanently:\
-`send o <playerobject#> AddMight points int <#ofpoints>`\
+`send o <playerobject#> AddMight points int <#ofpoints>`
 
 Boost a Players Intellect Permanently:\
-`send o <playerobject#> AddIntellect points int <#ofpoints>`\
+`send o <playerobject#> AddIntellect points int <#ofpoints>`
 
 Boost a Players Stamina Permanently:\
-`send o <playerobject#> AddStamina points int <#ofpoints>`\
+`send o <playerobject#> AddStamina points int <#ofpoints>`
 
 Boost a Players Aim Permanently:\
-`send o <playerobject#> AddAim points int <#ofpoints>`\
+`send o <playerobject#> AddAim points int <#ofpoints>`
 
 Boost a Players Agility Permanently:\
-`send o <playerobject#> AddAgility points int <#ofpoints>`\
+`send o <playerobject#> AddAgility points int <#ofpoints>`
 
 Boost a Players Mysticism Permanently:\
-`send o <playerobject#> AddMysticism points int <#ofpoints>`\
+`send o <playerobject#> AddMysticism points int <#ofpoints>`
 
 Give Penalties to a Log Off Ghost:\
-`send object <logoffobject#> InflictPenalties`\
+`send object <logoffobject#> InflictPenalties`
 #### Global Character Building
 Give Every Player all Skills (even offline users) :\
-`send c user giveplayerallskills`\
+`send c user giveplayerallskills`
 
 Give Every Player Single Skills (even offline users) :\
-`send c user adminsetskill num int <skill#> ability int <%ofskill>`\
+`send c user adminsetskill num int <skill#> ability int <%ofskill>`
 
 Give Every Player Single Spells (even offline users):\
-`send c user adminsetspell num int <spell#> ability int <%ofspell>`\
+`send c user adminsetspell num int <spell#> ability int <%ofspell>`
 
 Bio Inscription for All Players (even offline users) :\
-`send c user sethonorstring string quote <message>`\
+`send c user sethonorstring string quote <message>`
 
 Change everyones karma:\
 `send class <player#> addkarma amount <KarmaAmount>`\
-(set amount to $ 0 to make it nil)\
+(set amount to $ 0 to make it nil)
 
 Rescue all players:\
-`send c user admingotosafety`\
+`send c user admingotosafety`
 
 Give All Players a Temporary HP Boost:\
-`send c player GainHealth amount int <#ofhps>`\
+`send c player GainHealth amount int <#ofhps>`
 
 Permanantly Bond Every Player to a Mana Node:\
-`send o <mananode#> meld who c user`\
+`send o <mananode#> meld who c user`
 
 Permanantly Bond Every Player to Every Mana Node:\
-`send c mananode meld who c user`\
+`send c mananode meld who c user`
 
 Give All Players Mana Boost Semi-Permanant:\
 `send c user GainMana amount int <ManaAmount>`\
-(ao3/soth/node restores default mana)\
+(ao3/soth/node restores default mana)
 
 Boost All Players Vigor to 200 (works like eating something):\
-`send c user EatSomething filling int 0 nutrition int 200`\
+`send c user EatSomething filling int 0 nutrition int 200`
 
 Give Every Player Single Spell Schools (even offline users):\
-`send o <playerobject#> giveplayerallspells school int SS_<schoolname>`\
+`send o <playerobject#> giveplayerallspells school int SS_<schoolname>`
 
 Give Every Player all Spells (even offline users) :\
 `send c user GivePlayerAllSpells level INT 6`\
@@ -724,13 +724,13 @@ Give Every Player all Spells (even offline users) :\
 
 Place dynamic light\
 only usable by administrator and up\
-`dm place dynamic light`\
+`dm place dynamic light`
 
-`dm place candle`\
+`dm place candle`
 
-`dm place candelabra`\
+`dm place candelabra`
 
-`dm place brazier`\
+`dm place brazier`
 
 Create Statues:\
 First create a statue somewhere:
@@ -738,7 +738,7 @@ First create a statue somewhere:
 Then in the $ menu type:\
 `show instance statue`\
 Look for the last object number it shows then type:\
-`show o <laststatueobject#>`\
+`show o <laststatueobject#>`
 
 Then the first thing you should edit is the Weapon and Shield lines to Nil.\
 Otherwise if someone enters the room or you type reset then the room the statue is in will freeze up.\
@@ -754,9 +754,11 @@ sign_name_rsc and sign_icon_rsc\
 Then in the $ menu type:\
 `create resource <sign description>`\
 and then edit the vrDesc to the resource number you get.\
-Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it won't disappear.\
+Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it won't disappear.
 
 Here's a list of different signs you can use on Junk Items:\
+|Type|Name rsc| Icon rsc|
+|:-|:-|:-|
 |Normal Sign|sign_name_rsc|sign_icon_rsc|
 |Raza Sign|sign_name_rsc|sign_newbie_icon_rsc|
 |Assassin Game Sign|sign_name_rsc|assassinsign_name_rsc|
@@ -765,58 +767,42 @@ Here's a list of different signs you can use on Junk Items:\
 Books and Glass Pendants seem to work good every time. Try changing the `vrIcon` line first)
 
 Create any item:\
-```
-Create o OrnamentalObject
-```
-Then just set its `vrName`, `Icon` and `Desc` to any resource to make it look like that item.\
+`create o OrnamentalObject`\
+Then just set its `vrName`, `Icon` and `Desc` to any resource to make it look like that item.
 
-List of resources\
+List of resources
 
-Create a simple Edge Exit List anywhere:\
+Create a simple Edge Exit List anywhere:
 
 Create a portal and make it go where you want then change it's icon to:
 `admin_icon_blank`
 
 This will make the portal invisible so it will look like an area edge exit.
 
-Create a Food Dispenser (feast hall object):
-```
-create o fooddispenser
-```
-```
-send o <roomobject#> teleport what o <fooddispenserobject#>
-```
-Now move it where you want with the move button and change the `vrname`, `icon` and `desc` to make it look like an item.
+Create a Food Dispenser (feast hall object):\
+`create o fooddispenser`\
+`send o <roomobject#> teleport what o <fooddispenserobject#>`\
+Now move it where you want with the move button and change the `vrname`, `icon` and `desc` to make it look like an item.\
 Once you have done that, set the `poTemplate` line to the object number of the item you want it to give out.
 
 Create Globe of Seeing:\
-Globe you look in:
-```
-create o viewpointglobe
-```
+Globe you look in:\
+`create o viewpointglobe`
 
-```
-send o <roomobject#> teleport what o <ViewGlobeOobject#>
-```
+`send o <roomobject#> teleport what o <ViewGlobeOobject#>`
 
 (Put it in the room you want it in)
 
 Globe you see out of:\
-```
-Create o targetglobe
-```
+`create o targetglobe`
 
-```
-send o <roomobject#> teleport what o <TargetGlobeObject#>
-```
+`send o <roomobject#> teleport what o <TargetGlobeObject#>`\
 Now move them to where you want and change the view globe targetglobe line to the targetglobe's object number.\
 The `piRange` line determines how far away from the globe you can be to use it.\
 (Viewing and Target globes Name, Icon and Desc lines can be changed, so you could set them up to look like another object and spy on rooms!)
 
-Delete items:
-```
-Send o <ItemObj#> delete
-```
+Delete items:\
+`send o <ItemObj#> delete`
 
 Make walking NPCs:
 
@@ -840,15 +826,12 @@ reacts.
 
 That's a small selection of behavior types. If you want to mimic a certain monster behavior, just look at it
 in the admin window and copy the monsters behavior number to your NPC.\
-An NPC that has proper walking graphics already made for it, is the Street Urchin.\ To get this, just type in
-the admin window:
-```
-Create o TosUrchin
-```
-and then:
-```
-send o <RoomObjNumber> teleport what o <NewUrchinObjNumber>
-```
+An NPC that has proper walking graphics already made for it, is the Street Urchin.\
+To get this, just type in the admin window:\
+`Create o TosUrchin`\
+and then:\
+`send o <RoomObjNumber> teleport what o <NewUrchinObjNumber>`
+
 But any NPC can be made to move, look in the Default Class Name Reference for some NPC class names, or just if you can't find one you want in the list, just look at an NPC ingame through the admin window to find it's class name. You can also set the NPC's hit points to whatever you want so it stands a better chance of survival.
 
 
@@ -876,20 +859,14 @@ When making new a globe, use these numbers to determine which type of globe it i
 #### General Admin Commands
 Use these commands from the administrator console
 
-Create Administrator Account
-```
-create account admin <username> <password>
-```
+Create Administrator Account\
+`create account admin <username> <password>`
 
-Create Bard or DM account
-```
-create account DM <username> <password>
-```
+Create Bard or DM account\
+`create account DM <username> <password>`
 
-Create Player Account
-```
-create account user <username> <password>
-```
+Create Player Account\
+`create account user <username> <password>`\
 These create the accounts but now you must add character slots to them
 
 
