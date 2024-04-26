@@ -43,10 +43,10 @@ There are 3 levels of commands
 `goplayer <player name>` | go to a player - normal command bar
 
 ### Example: Creating an Object and Moving it
-`create object sign`
-> Created object 6162.
+`create object sign`\
+OUTPUT: `Created object 6162.`
 
-`show object 6162`
+`show object 6162`\
 OUTPUT:\
 ```
 :< OBJECT 6162 is CLASS Sign
@@ -69,7 +69,7 @@ In this case the room object we are in is `2005`
 
 Make the room the owner of the object\
 `send object (object of what room you are in) newhold what object (what you just made)`\
-`send object 2005 newhold what object 6162`
+`send object 2005 newhold what object 6162`\
 OUTPUT:\
 ```
 :< return from OBJECT 2005 MESSAGE NewHold (10022)
@@ -196,7 +196,7 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 ---
 
 Go to a specific room\
-`go <room string>`
+`go <room string>`\
 Example: `go rid_tos`
 
 The room string value is from `blakston.khd`\
@@ -213,7 +213,7 @@ Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f8
 ---
 
 Send an object to a specific room id\
-`send object <object number> teleportto rid int <room id>`
+`send object <object number> teleportto rid int <room id>`\
 Check [blakston.khd](https://github.com/Meridian59/Meridian59/blob/b22dceea862f85cc53772d93ffd815329da11b62/kod/include/blakston.khd#L359) for the room id (RID) values from the official Meridian 59 repository.
 
 
@@ -285,7 +285,7 @@ Show a node in the list\
 ```show listnode <nodeid>```
 
 Example showing the monsters that spawn at the main gate of cor noth on my test server\
-```show list 23294```
+```show list 23294```\
 OUTPUT:\
 ```
 :<
@@ -303,7 +303,7 @@ OUTPUT:\
 ```
 
 Now seeing it with `show listnode` instead of `list`\
-```show listnode 23294```
+```show listnode 23294```\
 OUTPUT:\
 ```
 :< first = LIST 23290
@@ -315,7 +315,7 @@ When we look at the node we see that per the documentation on Cons https://en.wi
 - in this case the subnode of this listnode numbered `23294` is `23290`
 
 Now let's see what's in listnode `23290`\
-`show listnode 23290`
+`show listnode 23290`\
 OUTPUT:\
 ```
 :< first = CLASS SpiderBaby
@@ -324,7 +324,7 @@ OUTPUT:\
 ```
 
 Checking the 23289 listnode in the `rest`\
-`show listnode 23289`
+`show listnode 23289`\
 OUTPUT:\
 ```
 :< first = INT 75
@@ -346,15 +346,15 @@ the screen will flash and new mobs will appear as the room is reconstructed
 
 ### Adding a single monster class in a room
 Create spawnrate value for new mob spawn class type\
-`create listnode int 100 $ 0`
+`create listnode int 100 $ 0`\
 OUTPUT: `Created list node [spawn rate list id]`
 
 Create monster class to spawn and associate with spawnrate value - example mob classes "ant" "troll"\
-`create listnode class [mob class name] list [spawn rate list id]`
+`create listnode class [mob class name] list [spawn rate list id]`\
 OUTPUT: `Created list node [mob class list id]`
 
 Create list of lists to populate room plMonsters parameter\
-`create listnode list [mob class list id] $ 0`
+`create listnode list [mob class list id] $ 0`\
 OUTPUT: `Created list node [room mob list]`
 
 Assign list to room\
@@ -367,32 +367,32 @@ Wait and see if the new mobs spawn
 
 ### Adding 2 monster classes in a room
 Create spawnrate value for new mob spawn class type\
-`create listnode int [value] $ 0`
+`create listnode int [value] $ 0`\
 OUTPUT: `Created list node [spawn rate list id]`\
 For [value] use 1-100, this is the % spawnrate.
 
 Create monster class to spawn and associate with spawnrate value\
 example mob classes "ant" "troll"\
-`create listnode class [mob class name] list [spawn rate list id]`
+`create listnode class [mob class name] list [spawn rate list id]`\
 OUTPUT: `Created list node [FIRST mob class list id]`
 
 Create list of first monster list and save this list id for later\
-`create listnode list [FIRST mob class list id] $ 0`
-OUTPUT: `Created list node [FIRST room mob list]`
+`create listnode list [FIRST mob class list id] $ 0`\
+OUTPUT: `Created list node [FIRST room mob list]`\
 If you only want one monster in the room, you are done. Use LIST [FIRST room mob list] for plMonsters in the room.
 
 Create spawnrate value for SECOND mob spawn class type\
-`create listnode int [value] $ 0`
-OUTPUT: `Created list node [SECOND spawn rate list id]`
+`create listnode int [value] $ 0`\
+OUTPUT: `Created list node [SECOND spawn rate list id]`\
 Both this and the previous [value] should add up to 100 total.
 
 Create SECOND monster class to spawn and associate with SECOND spawnrate value\
-`create listnode class [mob class name] list [SECOND spawn rate list id]`
+`create listnode class [mob class name] list [SECOND spawn rate list id]`\
 OUTPUT `Created list node [SECOND mob class list id]`
 
 Create list of lists to populate room plMonsters parameter\
-`create listnode list [SECOND room mob list] list [FIRST mob class list id]`
-OUTPUT: `Created list node [room mob list]`
+`create listnode list [SECOND room mob list] list [FIRST mob class list id]`\
+OUTPUT: `Created list node [room mob list]`\
 Order here is important, the SECOND list must be listed first.
 
 Assign list to room
@@ -412,16 +412,16 @@ Follow all above steps prior to Assign list to room and be sure your [value] are
 Also, be sure to save the [room mob list] id from above, you will need it to complete these steps.
 
 Create spawnrate value for THIRD mob spawn class type\
-`create listnode int [value] $ 0`
+`create listnode int [value] $ 0`\
 OUTPUT: `Created list node [THIRD spawn rate list id]`
 
 Create THIRD monster class to spawn and associate with THIRD spawnrate value\
-`create listnode class [mob class name] list [THIRD spawn rate list id]`
+`create listnode class [mob class name] list [THIRD spawn rate list id]`\
 OUTPUT: `Created list node [THIRD mob class list id]`
 
 Create list of lists to populate room plMonsters parameter\
-`create listnode list [THIRD mob class list id] list [room mob list]`
-OUTPUT: `Created list node [FINAL room mob list id] with all 3 mobs and spawn rates.`
+`create listnode list [THIRD mob class list id] list [room mob list]`\
+OUTPUT: `Created list node [FINAL room mob list id] with all 3 mobs and spawn rates.`\
 Order here is important, the THIRD monster list must come before the room mob list.
 
 Assign list to room\
@@ -438,20 +438,14 @@ Set game day year day hour etc
 
 object 0 is the server itself
 if you do 
-```
-show o 0
-```
+`show o 0`\
 which is abbreviated
-```
-show object 0
-```
+`show object 0`\
 then it will show you all the properties and variables of the server object
 
-You can see see `piDay` and `piYear` which you can edit in the Administration Cient Window (`shift+4`) <br>
-You can use the GUI to change it or just send the object the new value (example day 16) with:<br>
-```
-set object 0 piDay INT 16
-```
+You can see see `piDay` and `piYear` which you can edit in the Administration Cient Window (`shift+4`)\
+You can use the GUI to change it or just send the object the new value (example day 16) with:\
+`set object 0 piDay INT 16`
 
 | Meridian Time | Equivalent |
 |:-------------|:-------------|
@@ -462,19 +456,15 @@ set object 0 piDay INT 16
 
 ---
 
-Create Item
-```
-dm get item [item name]
-```
+Create Item\
+`dm get item [item name]`
 
 ---
 
 
-Create Special Items
-```
-DM create itematt <itematt>
-```
-EXAMPLE: "DM create itematt cold"
+Create Item Attributes (Only works for weapons)\
+`DM create itematt <itematt>`\
+EXAMPLE: `DM create itematt cold`
 
 itematt word | description
 |:-|:-|
@@ -500,17 +490,18 @@ acider | acid touch
 
 ### Color Items
 To change an item's color
-select the item through the administrator console (as you did to set piHits and piHits_init)
-Double click on the piItem_flags value
-Select Integer and type in a numerical value
+select the item through the administrator console (as you did to set piHits and piHits_init)\
+Double click on the piItem_flags value\
+Select Integer and type in a numerical value\
 
-These I believe are from 
+These I believe are from \
 kod\include\blakston.khd
 
 But the values in that file are hex format.  So you can use a web based hex to binary converter for color combinations
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/853653c7-c72c-4dfa-b65c-01c8f5b90912)
 
-Or here are some that I've used for testing that I know.  Color names are mine, not official by any means.
+Or here are some that I've used for testing that I know.\
+Color names are mine, not official by any means.
 use int values
 color | int value
 |:-|:-|
@@ -527,12 +518,12 @@ To have the item "refresh" the easiest way is to log out and in again really qui
 
 
 
-### use xlat to create new content
+### Use xlat to create new content
 open blakston.khd and look for the xlat list.  they'll say stuff like XLAT_GRAY_TO_??? or XLAT_BLUE_TO_??? so you just look at the thing you're trying to recolor and make sure the color shown matches the graphic you're trying to recolor
 
 and if an object has, say, both blue and red bits and you want to recolor both, there's a way to get a combined value:
 
-send o 0 EncodeTwoColorXlat color1 int AAA color2 int BBB
+`send o 0 EncodeTwoColorXlat color1 int AAA color2 int BBB`
 
 #### code version
 ```
@@ -543,152 +534,84 @@ iCombinedColor = Send(SYS, @EncodeTwoColorXlat, #color1=AAA, #color2=BBB);
 
 
 ### Delete a user from an account
-```
-delete user userObjectId
-```
+`delete user userObjectId`
 
 ### How to hide from the who list and be completely invisible 
-```
-DM Hidden
-```
+`DM Hidden`
 
 ### Admin Name Colors
-Green Bard/Admin Name:
-```
-set o <playerobj#> pbImmortal INT 2
-```
+Green Bard/Admin Name:\
+`set o <playerobj#> pbImmortal INT 2`
 
-or use the DM command:
-```
-DM Zandramas, in your infinite wisdom, please make me important.
-```
+or use the DM command:\
+`DM Zandramas, in your infinite wisdom, please make me important.`
 ---
 
-Yellow Game Creator Name:
-In the $ Menu type:
-create o creator
-<Copy the creators Object number it gives you>
-create resource <New Name>
-<Copy the Resource number it gives you>
-set o <creatorobject#> vrname resource <resource#>
-create account admin USERNAME PASSWORD
-(If you want to apply this to a new account, if not skip to the next step and use a different account #)
-<Copy the Account Number it gives you>
-set account o <account#> <creatorobject#>
+Yellow Game Creator Name:\
+In the $ Menu type:\
+`create o creator`\
+<Copy the creators Object number it gives you>\
+`create resource <New Name>`\
+<Copy the Resource number it gives you>\
+`set o <creatorobject#> vrname resource <resource#>`\
+`create account admin USERNAME PASSWORD`\
+(If you want to apply this to a new account, if not skip to the next step and use a different account #)\
+<Copy the Account Number it gives you>\
+`set account o <account#> <creatorobject#>`
 
 ---
 
-Yellow Name Only Quick Disguses:
-```
-DM armor
-```
-```
-DM shrub
-```
-```
-DM tree
-```
-```
-DM ghost
-```
-```
-DM stool
-```
-```
-DM priestess
-```
-```
-DM ant
-```
-```
-DM red ant
-```
-```
-DM human
-```
-```
-DM cow
-```
-```
-DM spider
-```
-```
-DM troll
-```
-```
-DM shadow
-```
+Yellow Name Only Quick Disguses:\
+`DM armor`\
+`DM shrub`\
+`DM tree`\
+`DM ghost`\
+`DM stool`\
+`DM priestess`\
+`DM ant`\
+`DM red ant`\
+`DM human`\
+`DM cow`\
+`DM spider`\
+`DM troll`\
+`DM shadow`\
 ### Character Building
 
-Single Character Building
-NOTE: Nearly all Send o commands can be done globally as well with a Send c user instead and vice
-versa, so just experiment with other things that aren't listed here.
+Single Character Building\
+NOTE: Nearly all Send o commands can be done globally as well with a Send c user instead and vice\
+versa, so just experiment with other things that aren't listed here.\
 
-Single Skills:
-```
-send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here
-```
-
-Single Spells:
-```
-send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here
-```
-
-Give Player Defined Weaponcraft Skills at certain level and %:
-```
-send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>
-```
-Give Player Defined Spell School at certain level and %:
-```
-send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>
-```
-Give Player all Weaponcraft Skills:
-```
-send o <playerobject#> giveplayerallskills
-```
-Give Player all Regular Spells:
-```
-send o <playerobject#> giveplayerallspells
-```
-Give Player Single Spell Schools:
-```
-send o <playerobject#> giveplayerallspells school int SS_<schoolname>
-```
-Remove all spells/skills:
-```
-send o <playerobj#> removeallskills
-```
-```
-send o <playerobj#> removeallspells
-```
-Remove Single Spells:
-```
-send o <playerobj#> RemoveSpell num int <spell#> isDM int <1 or 0>
-```
-note: (The isDM int <1 or 0> part isn't always required)
-
-Remove Single Skills:
-```
-send o <playerobj#> RemoveSkill num int <skill#>
-```
-
-Remove Inaccesable Spells:
-```
-send o <playerobj#> RemoveInaccessibleSpells
-```
-Clear all spells:
-```
-send o <playerobj#> ClearSpellList
-```
-Clear single schools:
-These don't seem to work
-```
-send o <PlayerObj#> StripSpellsOfSchool school int <School#>
-```
-Add to spell to other schools:
-```
-send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>
-```
+Single Skills:\
+`send o <playerobject#> adminsetskill num int <skill#> ability int <%ofskill> List Here`\
+Single Spells:\
+`send o <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here`\
+Give Player Defined Weaponcraft Skills at certain level and %:\
+`send o <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>`\
+Give Player Defined Spell School at certain level and %:\
+`send o <playerobject#> giveplayerallspells school int <sch#> level int <max_level> iability int<%>`\
+Give Player all Weaponcraft Skills:\
+`send o <playerobject#> giveplayerallskills`\
+Give Player all Regular Spells:\
+`send o <playerobject#> giveplayerallspells`\
+Give Player Single Spell Schools:\
+`send o <playerobject#> giveplayerallspells school int SS_<schoolname>`\
+Remove all spells/skills:\
+`send o <playerobj#> removeallskills`\
+`send o <playerobj#> removeallspells`\
+Remove Single Spells:\
+`send o <playerobj#> RemoveSpell num int <spell#> isDM int <1 or 0>`\
+Note: (The isDM int <1 or 0> part isn't always required)\
+Remove Single Skills:\
+`send o <playerobj#> RemoveSkill num int <skill#>`\
+Remove Inaccesable Spells:\
+`send o <playerobj#> RemoveInaccessibleSpells`\
+Clear all spells:\
+`send o <playerobj#> ClearSpellList`\
+Clear single schools:\
+These don't seem to work\
+`send o <PlayerObj#> StripSpellsOfSchool school int <School#>`\
+Add to spell to other schools:\
+`send o <PlayerObj#> AddToSchools school int <School#> change int <NewSchool#>`\
 School Numbers:
 |School|Number|
 |:-|:-|
@@ -700,120 +623,63 @@ Riija|5
 Jala|6
 
 
-Infinite Inventory and stomach:
-```
-set object <PlayerObj#> piBulk_hold $ 0
-```
-```
-set object <PlayerObj#> piWeight_hold $ 0
-```
-```
-set object <PlayerObj#> piStomach $ 0
-```
-Bio Inscription:
-```
-send o <playerobject#> sethonorstring string quote <message>
-```
-Give Player Permanant HP Boost:
-```
-send object <playerobject#> GainBaseMaxHealth amount int <HPamount>
-```
-Re-evaluate Player PK status (can they be killed) - use after HP boost:
-```
-send object <playerobject#> EvaluatePKStatus
-```
-Permanently Bond Player to a Mana Node:
-```
-send o <mananode#> meld who o <playerobject#>
-```
-Permanently Bond Player to Every Mana Node:
-```
-send c mananode meld who o <playerobject#>
-```
-Boost a Players Might Permanently:
-```
-send o <playerobject#> AddMight points int <#ofpoints>
-```
-Boost a Players Intellect Permanently:
-```
-send o <playerobject#> AddIntellect points int <#ofpoints>
-```
-Boost a Players Stamina Permanently:
-```
-send o <playerobject#> AddStamina points int <#ofpoints>
-```
-Boost a Players Aim Permanently:
-```
-send o <playerobject#> AddAim points int <#ofpoints>
-```
-Boost a Players Agility Permanently:
-```
-send o <playerobject#> AddAgility points int <#ofpoints>
-```
-Boost a Players Mysticism Permanently:
-```
-send o <playerobject#> AddMysticism points int <#ofpoints>
-```
-Give Penalties to a Log Off Ghost:
-```
-send object <logoffobject#> InflictPenalties
-```
+Infinite Inventory and stomach:\
+`set object <PlayerObj#> piBulk_hold $ 0`\
+`set object <PlayerObj#> piWeight_hold $ 0`\
+`set object <PlayerObj#> piStomach $ 0`\
+Bio Inscription:\
+`send o <playerobject#> sethonorstring string quote <message>`\
+Give Player Permanant HP Boost:\
+`send object <playerobject#> GainBaseMaxHealth amount int <HPamount>`\
+Re-evaluate Player PK status (can they be killed) - use after HP boost:\
+`send object <playerobject#> EvaluatePKStatus`\
+Permanently Bond Player to a Mana Node:\
+`send o <mananode#> meld who o <playerobject#>`\
+Permanently Bond Player to Every Mana Node:\
+`send c mananode meld who o <playerobject#>`\
+Boost a Players Might Permanently:\
+`send o <playerobject#> AddMight points int <#ofpoints>`\
+Boost a Players Intellect Permanently:\
+`send o <playerobject#> AddIntellect points int <#ofpoints>`\
+Boost a Players Stamina Permanently:\
+`send o <playerobject#> AddStamina points int <#ofpoints>`\
+Boost a Players Aim Permanently:\
+`send o <playerobject#> AddAim points int <#ofpoints>`\
+Boost a Players Agility Permanently:\
+`send o <playerobject#> AddAgility points int <#ofpoints>`\
+Boost a Players Mysticism Permanently:\
+`send o <playerobject#> AddMysticism points int <#ofpoints>`\
+Give Penalties to a Log Off Ghost:\
+`send object <logoffobject#> InflictPenalties`\
 #### Global Character Building
-Give Every Player all Skills (even offline users) :
-```
-send c user giveplayerallskills
-```
-Give Every Player Single Skills (even offline users) :
-```
-send c user adminsetskill num int <skill#> ability int <%ofskill>
-```
-Give Every Player Single Spells (even offline users):
-```
-send c user adminsetspell num int <spell#> ability int <%ofspell>
-```
-Bio Inscription for All Players (even offline users) :
-```
-send c user sethonorstring string quote <message>
-```
-Change everyones karma:
-```
-send class <player#> addkarma amount <KarmaAmount>
-```
-(set amount to $ 0 to make it nil)
-Rescue all players:
-```
-send c user admingotosafety
-```
-Give All Players a Temporary HP Boost:
-```
-send c player GainHealth amount int <#ofhps>
-```
-Permanantly Bond Every Player to a Mana Node:
-```
-send o <mananode#> meld who c user
-```
-Permanantly Bond Every Player to Every Mana Node:
-```
-send c mananode meld who c user
-```
-Give All Players Mana Boost Semi-Permanant:
-```
-send c user GainMana amount int <ManaAmount>
-```
-(ao3/soth/node restores default mana)
-
-Boost All Players Vigor to 200 (works like eating something):
-```
-send c user EatSomething filling int 0 nutrition int 200
-```
-Give Every Player Single Spell Schools (even offline users):
-```
-send o <playerobject#> giveplayerallspells school int SS_<schoolname>
-```
-Give Every Player all Spells (even offline users) :
-```
-send c user GivePlayerAllSpells level INT 6
-```
+Give Every Player all Skills (even offline users) :\
+`send c user giveplayerallskills`\
+Give Every Player Single Skills (even offline users) :\
+`send c user adminsetskill num int <skill#> ability int <%ofskill>`\
+Give Every Player Single Spells (even offline users):\
+`send c user adminsetspell num int <spell#> ability int <%ofspell>`\
+Bio Inscription for All Players (even offline users) :\
+`send c user sethonorstring string quote <message>`\
+Change everyones karma:\
+`send class <player#> addkarma amount <KarmaAmount>`\
+(set amount to $ 0 to make it nil)\
+Rescue all players:\
+`send c user admingotosafety`\
+Give All Players a Temporary HP Boost:\
+`send c player GainHealth amount int <#ofhps>`\
+Permanantly Bond Every Player to a Mana Node:\
+`send o <mananode#> meld who c user`\
+Permanantly Bond Every Player to Every Mana Node:\
+`send c mananode meld who c user`\
+Give All Players Mana Boost Semi-Permanant:\
+`send c user GainMana amount int <ManaAmount>`\
+(ao3/soth/node restores default mana)\
+Boost All Players Vigor to 200 (works like eating something):\
+`send c user EatSomething filling int 0 nutrition int 200`\
+Give Every Player Single Spell Schools (even offline users):\
+`send o <playerobject#> giveplayerallspells school int SS_<schoolname>`\
+Give Every Player all Spells (even offline users) :\
+`send c user GivePlayerAllSpells level INT 6`\
 (You can also put 7 to give the player the slitherbolt spell also)
 
 
