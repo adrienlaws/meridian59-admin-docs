@@ -943,6 +943,7 @@ If an item's plItem_Attributes list is not $ (null or nonexistent), then it will
 Send is an immediate function call, while Post gets put on the back of the server's message queue, so the function call doesn't happen until the current call stack returns all the way to the top level.  Another way to think of it is that Send goes first, whereas Post goes after all higher level class message functions. (Before with Send v After with Post).
 
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
+🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
 For example, if you created the following .kod file and deleted it
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/d63c39c1-ba44-4028-9636-ecb34e75b1a8)
