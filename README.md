@@ -942,6 +942,9 @@ If an item's plItem_Attributes list is not $ (null or nonexistent), then it will
 #### What is the difference between Post and Send?
 Send is an immediate function call, while Post gets put on the back of the server's message queue, so the function call doesn't happen until the current call stack returns all the way to the top level.  Another way to think of it is that Send goes first, whereas Post goes after all higher level class message functions. (Before with Send v After with Post).
 
+#### Is Blakod case sensitive? (for example @GetOwner vs @getowner)
+Blakod is case insensitive.  However the codebase uses `PascalCase` or  `UpperCamelCase` to capitalize function words.
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
