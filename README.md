@@ -223,9 +223,9 @@ admin command reference\
 `kod\object\active\holder\nomoveon\battler\player\user\dm\admin.kod`
 
 ### Get more information about Blakod message (i.e. function)
-`show message [class] [message]`
-Example: `show message item IsCursed`
-Output: `This returns TRUE if a RemoveCurse spell should unuse the item.  Since an ItemAtt can curse an item, go through those to check.`
+`show message [class] [message]`\
+Example: `show message item IsCursed`\
+Output: `This returns TRUE if a RemoveCurse spell should unuse the item.  Since an ItemAtt can curse an item, go through those to check.`\
 
 Start tour of all rooms\
 `dm start tour`
