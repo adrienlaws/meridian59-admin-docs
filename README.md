@@ -192,6 +192,10 @@ Tip: edit object properties to set `pbIsLit` and `piLightIntensity` as needed
 `dm disguise ant` | (or other monster name)
 `dm get items` 
 `dm get` | misc, gems reagents food weapons armor ammo wands rings sundries games necklaces potions scrolls wands masks
+`dm testexitpoints` | test the map exit points in a room
+`dm testmonstergenpoints` | test the monster generation points in a room
+`dm testitempoints` | test the item generation points in a room
+
 
 ---
 
