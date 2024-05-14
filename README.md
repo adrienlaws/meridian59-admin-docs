@@ -952,6 +952,12 @@ Send is an immediate function call, while Post gets put on the back of the serve
 #### Is Blakod case sensitive? (for example @GetOwner vs @getowner)
 Blakod is case insensitive.  However the codebase uses `PascalCase` or  `UpperCamelCase` to capitalize function words.
 
+### My PR was merged but now everytime I submit a new one there are extra commits
+This is related to forking a repository and then clicking on the `sync changes`.\n
+If you submit commits A,B,C as part of your Pull Request (PR) then when it is merged typically the originating repo will squash the commits into one commit (commit D for example).  Once merged, your fork will show commits A,B,C but the originating repo will not know anything about them since the changes were all contained within commit D.\n
+To fix this you might be able to use something like this https://github.com/repo-sync/github-sync \n
+Or you can use git commands to fetch the changes on the originating main or master repo, and override your forked repo main or master branch.
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
