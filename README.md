@@ -959,10 +959,13 @@ To fix this you might be able to use something like this https://github.com/repo
 Or you can use git commands to fetch the changes on the originating main or master repo, and override your forked repo main or master branch.
 
 reset the branch to match the upstream branch
+- fetch upstream changes from the original repo
+	- `git fetch upstream`
+
 - hard reset: will discard all local changes and move branch pointer to the same commit as the upstream branch
-	- `git reset --hard upstream/<branch name`>
+	- `git reset --hard upstream/<branch name>`
 	- example
-		- `git reset -hard upstream/master`
+		- `git reset --hard upstream/master`
 - soft reset: move your branch commit to same commmit as the upstream branch, but leave your changes stahged for commit
 	- `git reset --soft upstream/<branch name>`
 - mixed reset: default behavior and will move your branch pointer to the same commit as the upstream branch and your changes will be unstaged
