@@ -39,7 +39,7 @@ There are 3 levels of commands
 |Command|Notes|
 |:-|:-|
 `go <room string>` | you can use go 50 (using the id directly) instead of needing to use the rid strings
-`getplayer <playername>` | bring a player to you - use in normal command bar
+`getplayer <playername>` | bring a player to you - use in normal command bar.  Note: they must have gone through the Raza portal
 `goplayer <player name>` | go to a player - normal command bar
 
 ### Example: Creating an Object and Moving it
