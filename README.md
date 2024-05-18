@@ -868,9 +868,8 @@ When making new a globe, use these numbers to determine which type of globe it i
  NID_KOC_HALL | 24
 
 #### General Character commands
-All commands are\
-`send o <playerObj#> <command/message>`\
-
+All commands are \
+`send o <playerObj#> <command/message>` \
 `GetGender`\
 `GetNodeList`\
 `RemoveNodeFromList node_num`\
