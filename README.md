@@ -867,6 +867,29 @@ When making new a globe, use these numbers to determine which type of globe it i
  NID_MAR_HALL | 24
  NID_KOC_HALL | 24
 
+#### General Character commands
+All commands are\
+`send o <playerObj#> <command/message>`\
+
+`GetGender`\
+`GetNodeList`\
+`RemoveNodeFromList node_num`\
+`GetFaction`\
+`GetFactionService`\
+`GetBaseMaxHealth`\
+`GetKarma`\
+`GetMoneyObject` (shows the money obj # on the player)\
+`JoinFaction new_faction int #` (1 = Duke, 2 = Princess)\
+`ResignFaction` (Makes you leave your faction)\
+`GetVigorRestThreshold`\
+`NewMaxMana` amount\
+`SetPlayerFlag flag int value int`\
+`TryUseItem what o <ItemObj#>`\
+`TryUnuseItem what o <ItemObj#>` (Equip and unequips items only in their invent)
+`GetBulkMax`\
+`GetWeightMax`\
+`GetRawMysticism`\
+
 #### General Admin Commands
 Use these commands from the administrator console
 
