@@ -469,7 +469,8 @@ Create Item\
 ---
 
 
-Create Item Attributes (Only works for weapons)\
+Create Item Attributes\
+Note: this only works for weapons, however you can add item attributes to a weapon, then check the weapon object's `plItem_attributes` list value and assign that list to another item that is not a weapon.  For example you could create a durable mace then assign that list to plate armor.\
 `DM create itematt <itematt>`\
 EXAMPLE: `DM create itematt cold`
 
