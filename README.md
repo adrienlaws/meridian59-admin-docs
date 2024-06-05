@@ -1006,6 +1006,18 @@ Final step, to make sure your remote repository (your fork) match your local cha
 - Example: `trace on morph performmorph` \
 This is extermely helpful when you want to see what happens when a function/message is called.
 
+#### How do item attributes work?
+- there is a list on an object called `plItem_attributes`
+	- it will reference a list number
+- if you do show list and the number references in `plItem_attributes` it will show you what attributes the item has
+![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/ef64e891-39bc-40ff-88ea-86e4cbebe073)
+- the first value is a 3 part compound (INT 1000)
+	- the ones column determines if the attribute is identified or not (odd = identified, even = unidentified)
+	- the tens column determins the power (this would be used for colhorr or justice weapons for example)
+	- the hundreds/thousands is an int value determined by blakston.khd which holds the list of server constants.  This number determines what the attribute is (for example 10 = shrouded, 65 = bonk weapon)
+- the second is an optional timer (TIMER 448)
+	- when the timer reaches 0, the attribute should remove itself from the item
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
