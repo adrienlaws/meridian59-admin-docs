@@ -482,8 +482,8 @@ vamper | vamp weap
 twister | GMT
 transcendant | soft white light
 bonker | bonk weap
-expert | random justice weapon, can be weak or good, its random
-spellcasters name | makes weapon special, example 'spellcasters acid'
+expert | random justice weapon, can be weak or good, it's random
+spellcasters <name> | makes weapon special, example 'spellcasters acid'
 durable | more durable
 duke | duke
 cold | icy
