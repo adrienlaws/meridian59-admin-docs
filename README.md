@@ -1017,6 +1017,7 @@ This is extermely helpful when you want to see what happens when a function/mess
 	- the hundreds/thousands is an int value determined by blakston.khd which holds the list of server constants.  This number determines what the attribute is (for example 10 = shrouded, 65 = bonk weapon)
 - the second is an optional timer (TIMER 448)
 	- when the timer reaches 0, the attribute should remove itself from the item
+ 	- note: the item attribute schema or data structure is not always consistent.  Usually the timer is in the second position but not always.
 
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
