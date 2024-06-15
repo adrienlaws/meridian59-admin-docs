@@ -551,11 +551,10 @@ iCombinedColor = Send(SYS, @EncodeTwoColorXlat, #color1=AAA, #color2=BBB);
 `DM Hidden`
 
 ### Admin Name Colors
-Green Bard/Admin Name:\
+In the Green Bard/Admin Name: \
 `set object <playerobj#> pbImmortal INT 2`\
 or use the DM command:\
 `DM Zandramas, in your infinite wisdom, please make me important.`
----
 
 Yellow Game Creator Name:\
 
