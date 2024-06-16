@@ -1034,6 +1034,11 @@ This is extermely helpful when you want to see what happens when a function/mess
 	- when the timer reaches 0, the attribute should remove itself from the item
  	- note: the item attribute schema or data structure is not always consistent.  Usually the timer is in the second position but not always.
 
+#### What's the procedure for PRs to add a resource (example: a .wav file)?
+- Add the new resource into the `resource\audio\wav` directory
+- Historically builders have had to remember which files are new at each update, which is error-prone
+  - suggested improvmenet: also add a makefile to that directory that copies the wav files into the `run\localclient\resource` directory
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
