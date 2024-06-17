@@ -1039,6 +1039,12 @@ This is extermely helpful when you want to see what happens when a function/mess
 - Historically builders have had to remember which files are new at each update, which is error-prone
   - suggested improvmenet: also add a makefile to that directory that copies the wav files into the `run\localclient\resource` directory
 
+#### None of my NPC talk on my local server - how do I fix this?
+- read in the appropriate admin commands through the administrator console on the server
+	- `read \dlg\dialog.txt`
+ 	- You may need to adjust the forward or backslashes depending on if you are running the server on Windows or Linux
+
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
