@@ -985,7 +985,8 @@ Make sure you are using Windows 1252 as your encoding.  Visual Studio Code will 
           - If even one of the attributes is unrevealed, the item will show as unidentified.
 
 #### What is the difference between Post and Send?
-Send is an immediate function call, while Post gets put on the back of the server's message queue, so the function call doesn't happen until the current call stack returns all the way to the top level.  Another way to think of it is that Send goes first, whereas Post goes after all higher level class message functions. (Before with Send v After with Post).
+- Send is an immediate function call, while Post gets put on the back of the server's message queue, so the function call doesn't happen until the current call stack returns all the way to the top level.
+- Another way to think of it is that Send goes first, whereas Post goes after all higher level class message functions. (Before with Send v After with Post).
 
 #### Is Blakod case sensitive? (for example @GetOwner vs @getowner)
 Blakod is case insensitive.  However the codebase uses `PascalCase` or  `UpperCamelCase` to capitalize function words.
