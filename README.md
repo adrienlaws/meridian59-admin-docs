@@ -530,11 +530,11 @@ reset
 
 
 ### Use xlat to create new content
-open blakston.khd and look for the xlat list.  they'll say stuff like XLAT_GRAY_TO_??? or XLAT_BLUE_TO_??? so you just look at the thing you're trying to recolor and make sure the color shown matches the graphic you're trying to recolor
-
-and if an object has, say, both blue and red bits and you want to recolor both, there's a way to get a combined value:
-
-`send object 0 EncodeTwoColorXlat color1 int AAA color2 int BBB`
+- Check `blakston.khd` and find the xlat list  
+  - it will have stuff like `XLAT_GRAY_TO_???` or `XLAT_BLUE_TO_???`
+  - so you just look at the thing you're trying to recolor and make sure the color shown matches the graphic you're trying to recolor
+  - if an object has, say, both blue and red bits and you want to recolor both, there's a way to get a combined value:
+    `send object 0 EncodeTwoColorXlat color1 int AAA color2 int BBB`
 
 #### code version
 ```
