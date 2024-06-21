@@ -498,19 +498,21 @@ acider | acid touch
 
 ### Color Items
 To change an item's color
-select the item through the administrator console (as you did to set piHits and piHits_init)\
-Double click on the piItem_flags value\
-Select Integer and type in a numerical value
+- select the item through the administrator console (as you did to set piHits and piHits_init)\
+- Double click on the piItem_flags value\
+- Select Integer and type in a numerical value
 
 These I believe are from \
-kod\include\blakston.khd
+`kod\include\blakston.khd`
 
-But the values in that file are hex format.  So you can use a web based hex to binary converter for color combinations
-![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/853653c7-c72c-4dfa-b65c-01c8f5b90912)
+The values in that file are hex format.
+- You can use a web based hex to binary converter for color combinations
+  ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/853653c7-c72c-4dfa-b65c-01c8f5b90912)
 
-Or here are some that I've used for testing that I know.\
-Color names are mine, not official by any means.
-use int values
+Here are some color values\
+(Color names are mine, not official by any means.)
+use `int` values
+
 color | int value
 |:-|:-|
 seaweed green | 83
