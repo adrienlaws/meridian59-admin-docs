@@ -342,14 +342,15 @@ This means that the listnode contains only `int 75` (the spawn rate % for `Spide
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/1ae82405-b6ab-41bd-96fd-9f50d14a0cd5)
 
 ### Modifying room .kod spawn lists
-edit room .kod example `g4.kod` for main gate of cor noth\
-change `plMonsters` = `[ [&SpiderBaby, 75], [&Centipede, 25] ];` to something different\
-Example: `plMonsters` = `[ [&Troll, 75], [&Spider, 25] ];`\
-build the kod folder (for windows systems run ``` nmake ``` in the /kod folder)\
-run `reload system` in the admin console\
-get the room object number and send recreate example\
-`send object 7003 recreate`
-the screen will flash and new mobs will appear as the room is reconstructed
+- edit room .kod
+  - example `g4.kod` for main gate of cor noth
+- change `plMonsters` = `[ [&SpiderBaby, 75], [&Centipede, 25] ];` to something different
+  - example: `plMonsters` = `[ [&Troll, 75], [&Spider, 25] ];`
+- build the kod folder (for windows systems run ``` nmake ``` in the /kod folder)
+- run `reload system` in the admin console
+- get the room object number and send recreate example
+  - example: `send object 7003 recreate`
+- the screen will flash and new mobs will appear as the room is reconstructed
 
 ### Adding a single monster class in a room
 Create spawnrate value for new mob spawn class type\
