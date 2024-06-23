@@ -761,7 +761,7 @@ character you want the statue of same lines in the $ menu.\
 After you've done that change the poOriginal line to the Character you want the statue to be of Object#
 Statue Editing Info and Poses.
 
-Create Signs:\
+Create Signs:
 - Either Buy or Create a "Junk" class item that Pacal sells.
 - Edit the change the vrName and vrIcon lines to:
   - `sign_name_rsc` and `sign_icon_rsc`
