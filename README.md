@@ -762,13 +762,13 @@ After you've done that change the poOriginal line to the Character you want the 
 Statue Editing Info and Poses.
 
 Create Signs:\
-First either Buy or Create a "Junk" class item that Pacal sells.\
-Then edit the change the vrName and vrIcon lines to:\
-sign_name_rsc and sign_icon_rsc\
-Then in the $ menu type:\
-`create resource <sign description>`\
-and then edit the vrDesc to the resource number you get.\
-Now drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it won't disappear.
+- Either Buy or Create a "Junk" class item that Pacal sells.
+- Edit the change the vrName and vrIcon lines to:
+  - `sign_name_rsc` and `sign_icon_rsc`
+- In the $ menu type:
+  `create resource <sign description>`
+- Edit the vrDesc to the resource number you get.
+- Drop the sign where you want and change the poOwner line to Nil so nobody can pick it up and it won't disappear.
 
 Here's a list of different signs you can use on Junk Items:
 |Type|Name rsc| Icon rsc|
