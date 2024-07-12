@@ -500,10 +500,10 @@ acider | acid touch
 ### Color Items
 To change an item's color
 - select the item through the administrator console (as you did to set piHits and piHits_init)\
-- Double click on the piItem_flags value\
-- Select Integer and type in a numerical value
+- double click on the piItem_flags value\
+- select `Integer` and type in a numerical value
 
-These I believe are from \
+These integer values are from \
 `kod\include\blakston.khd`
 
 The values in that file are hex format.
