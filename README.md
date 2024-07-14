@@ -559,7 +559,7 @@ In the Green Bard/Admin Name: \
 or use the DM command:\
 `DM Zandramas, in your infinite wisdom, please make me important.`
 
-Yellow Game Creator Name:\
+Yellow (Creator) Name:\
 
 In the $ Menu type:\
 `create object creator`\
@@ -574,7 +574,7 @@ Copy the Account Number it gives you\
 
 ---
 
-Yellow Name Only Quick Disguses:\
+Yellow (Creator)) Only Quick Disguises:\
 `DM armor`\
 `DM shrub`\
 `DM tree`\
