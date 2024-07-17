@@ -1059,3 +1059,8 @@ For example, if you created the following .kod file and deleted it
 Go into `kodbase.txt` and delete relevant lines for the class (in this case `ItemAttMagic`).  The `kodbase.txt` file will have a line starting with C for that class.
 ![image](https://github.com/adrienlaws/meridian59-admin-docs/assets/4023541/f1c1c45f-0ca0-4608-a298-726df97286b8)
 
+#### I keep getting an error when compiling (building) using nmake with .kod files
+Example error
+>NMAKE : fatal error U1077: '..\..\..\..\..\bin\bc -d -I ..\..\..\..\..\kod\include -K ..\..\..\..\..\kod\kodbase.txt healwand.kod ' : return code '0xc0000005'
+- this could be due to using a local variable that is not declared
+  - example: `for i in blah` but not having a `local i`
