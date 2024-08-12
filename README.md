@@ -1064,3 +1064,8 @@ Example error
 >NMAKE : fatal error U1077: '..\..\..\..\..\bin\bc -d -I ..\..\..\..\..\kod\include -K ..\..\..\..\..\kod\kodbase.txt healwand.kod ' : return code '0xc0000005'
 - this could be due to using a local variable that is not declared
   - example: `for i in blah` but not having a `local i`
+ 
+#### How to test statues on the island?
+
+Create one or more non-admin accounts -- you may only need one. Give them whatever equipment you want using an admin account. Then, whichever way you prefer, make a call to ChooseStatues  in KocatanHall -- send object <KocatanHall object ID> ChooseStatues. Statues of your single user will be generated for all statue positions. If you want to update the equipment and then the statues, make your changes and then send a call to ResetStatues.  Choose is needed first.
+
