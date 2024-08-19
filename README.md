@@ -1069,3 +1069,12 @@ Example error
 
 Create one or more non-admin accounts -- you may only need one. Give them whatever equipment you want using an admin account. Then, whichever way you prefer, make a call to ChooseStatues  in KocatanHall -- send object <KocatanHall object ID> ChooseStatues. Statues of your single user will be generated for all statue positions. If you want to update the equipment and then the statues, make your changes and then send a call to ResetStatues.  Choose is needed first.
 
+#### I'm getting a client sound debug message when trying to add a new sound and I can't hear it
+Example error
+>`Error opening wave file C:\Meridian59\run\localclient\resource\new_sound.wav`
+- this could be due to using a sound format that is higher than supported by either the MSS (Miles Sound System) or the waveplay library used in the client
+- Safe Assumptions for Compatibility:
+  - Sample Rate: 22,050 Hz or 44,100 Hz (44.1 kHz is the maximum commonly supported)
+  - Bit Depth: 8-bit or 16-bit (16-bit is standard for higher quality but will result in larger files)
+  - Channels: Mono (1 channel) or Stereo (2 channels)
+    - Since the game already does spacial audio you might consuider sticking with a Mono Channel unless it is very special sound
