@@ -1016,7 +1016,7 @@ reset the branch to match the upstream branch
 
 I recommend a hard reset to your fork when working on Meridian when you have no local changes you want to keep
 
-Final step, to make sure your remote repository (your fork) match your local changes you should force push the changes
+Final step, to make sure your remote repository (your fork) matches your local changes, you should force push the changes
 - `git push origin <your branch name> --force`
 - example:
 	- `git push origin master --force`
