@@ -1050,6 +1050,13 @@ This is extermely helpful when you want to see what happens when a function/mess
  	- You may need to adjust the forward or backslashes depending on if you are running the server on Windows or Linux
 
 
+#### What is `itematt 55` or `waspellt.kod` vs `waspell.kod`?
+
+The `5501` or `waspellt` (not to be confused with `waspell`) item attribute is (supposedly) strictly a descriptor item attribute.  It flags the item as having whatever and should remove the attribute when the timer runs out.  However it also allows for permanently enchanted items.  Key point: just because it has 5501 doesn't mean it's doing anything to the actual weapon, as in assigning an enchantment or attack type.
+
+For example to see if a weapon with itematt 5501 (revealed unholy weapon) is actually in effect check if `piAttack_spell` is set to `INT 32` which is `ATCK_SPELL_UNHOLY = 0x0020` as specified in blakston.khd.  This will tell you if the weapon is actually enchanted.
+
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
