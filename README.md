@@ -86,8 +86,30 @@ Move it to xy 21 42 in Raza to move it near the blink spot for example\
 You can also do this via a command\
 `send object 2005 somethingmoved what object 6162 new_row int 20 new_col int 20 fine_row int 32 fine_col int 32`
 
+### Example: Creating an Object and moving it to your inventory
 
+Prework: Look up the class name of the object.  In the blakod file (.kod) find the class name at the top.  For example "gift"
+>Gift is PassiveItem
 
+`create object gift`\
+OUTPUT: `Created object 7081.`
+
+Check what owns the object
+`show object 7081`\
+OUTPUT: `: poOwner              = $ 0`\
+This means that nothing owns it currently
+
+To give it to yourself click, check your object properties by clicking `show`\
+OUTPUT: `object 4259`\
+This means that YOU are object 4259\
+![meridian_k6YZDl5rSi](https://github.com/user-attachments/assets/7926ab1c-74f0-4805-98a6-ea9d48c05167)
+
+Now use the `NewHold` command to make your object (you) "hold" or own the newly created gift object\
+`send object 4259 newhold what object 7081`
+
+The newly created gift object 7081 should appear in your inventory\
+
+NOTE: BE EXTREMELY CAREFUL when using NewHold to not put objects inside of the wrong target object.  This can cause serious server problems.
 
 ### Common Issues
 
