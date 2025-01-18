@@ -1113,7 +1113,7 @@ Example error
 - **constants**: self explanatory, put things here that never change.  Reference values.  Example `MAX_DAMAGE_PER_HIT = 30`
 - **resources**: text, sounds files, graphics files - things that are static and don't change.  Sort of like constants but for files and strings as opposed to values.  Example `berserkerring_icon_rsc = ring2.bgf`
 - **classvars**: properties that apply to the entire class.  Example `viMax_vigor = 200` for `player.kod`.  200 max vigor for every player always
-` **properties**: things that can change for each class instance.  Example `plSpells = $` is the list of spells one character has
+- **properties**: things that can change for each class instance.  Example `plSpells = $` is the list of spells one character has
 - **messages**: functions that pertain to to the kod object. Do stuff here.  Or check stuff.  Example `StopResting()` or `IsUndead()`
 - Additionally
   - Think of classvars like static class members in C++, while properties are instance variables.
