@@ -1108,11 +1108,11 @@ Example error
   - Channels: Mono (1 channel) or Stereo (2 channels)
     - Since the game already does spacial audio you might consuider sticking with a Mono Channel unless it is very special sound
    
-### Can you explain more about the Blakod class format?
+#### Can you explain more about the Blakod class format?
 - **class header**: saying where it fits in the class hierarchy.  This is important for inheritance.  Example `BerserkerRing` is `Ring`
 - **constants**: self explanatory, put things here that never change.  Reference values.  Example `MAX_DAMAGE_PER_HIT = 30`
 - **resources**: text, sounds files, graphics files - things that are static and don't change.  Sort of like constants but for files and strings as opposed to values.  Example `berserkerring_icon_rsc = ring2.bgf`
-- **classvars**: properties that apply to the entire class.  Example `viMax_vigor = 200` for `player.kod`.  200 max vigor for every player always
+- **classvars**: properties that apply to the entire class.  Example `viMax_vigor = 200` for `player.kod`.  200 max vigor for every player, always
 - **properties**: things that can change for each class instance.  Example `plSpells = $` is the list of spells one character has
 - **messages**: functions that pertain to to the kod object. Do stuff here.  Or check stuff.  Example `StopResting()` or `IsUndead()`
 - Additionally
