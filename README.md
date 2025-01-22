@@ -1120,3 +1120,6 @@ Example error
   - messages are virtual functions
   - Resources are special in that the compiler generates a special `.rsc` file for each class that contains these so that they can be referenced by name without having to send the whole string when they're referenced.
     - You wouldn't do it that way nowadays, but this is back on 1200 baud modem
+
+#### Can class variables be updated by an admin?
+- Yes, see the `set class` admin function
