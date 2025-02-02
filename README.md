@@ -509,15 +509,18 @@ expert | random justice weapon, can be weak or good, it's random
 spellcasters <name> | makes weapon special, example 'spellcasters acid'
 durable | more durable
 duke | duke
+rebel | jonas
+princess | princess
 cold | icy
 shock | zap
 twister | gmt
 punisher | justice weapon
-paralyzer | hold
-blinder | blind
 fire | tof
-vamper | vamp
 acider | acid touch
+ceremonial| arena weapon
+cursed | cursed weapon
+purger| purge
+glowing | glow
 
 ### Color Items
 To change an item's color
