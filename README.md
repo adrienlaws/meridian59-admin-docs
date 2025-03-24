@@ -1126,3 +1126,10 @@ Example error
 
 #### Can class variables be updated by an admin?
 - Yes, see the `set class` admin function
+
+#### Why do `$` or `NIL` types have `0` values?
+- Blakod values have two parts, a "type" field and a "number" field (also called "value" in ternally, but let's say "number" to avoid confusion).
+  - The "type" field is an integer that indicates the type of the number: Int, Class, Message, Timer, Object, etc.
+  - One of the type field values is the special type NIL (abbreviated as "$").
+  - When the type field is NIL, the number field is ignored, although traditionally it is set to 0 to make debugging easier ("why is the number field 23462?  Oh, the type is NIL, so never mind").
+  - What you are seeing in the output is the combination of the NIL type value "$" and the number value 0.
