@@ -975,6 +975,81 @@ Where the %s etc appears in the resource string determines "#parm" it applies to
 
 If you want to see an example of mixed types in the same resource string, look at the room key room maintenence kod file 
 
+### Dynamic Configuration Options
+
+#### **[Socket]**
+- `DNSLookup` (Boolean)
+- `BlockTime` (Integer)
+
+#### **[Channel]**
+- `Flush` (Boolean)
+
+#### **[Login]**
+- `MinVersion` (Integer)
+- `InvalidVersion` (Integer)
+- `MaxPerIPAddress` (Integer)
+
+#### **[Inactive]**
+- `Synched` (Integer)
+- `Transfer` (Integer)
+- `SelectChar` (Integer)
+- `Game` (Integer)
+- `Maintenance` (Integer)
+- `Override` (Boolean)
+
+#### **[Credit]**
+- `Admin` (Integer)
+
+#### **[Session]**
+- `MaxActive` (Integer)
+
+#### **[Email]**
+- `LocalMachineName` (String)
+
+#### **[Update]**
+- `ClientMachine` (String)
+- `ClientFilename` (String)
+- `PackageMachine` (String)
+- `PackagePath` (String)
+- `DownloadReason` (String)
+- `DemoButton` (String)
+
+#### **[Rights]**
+- `GoRoom` (Integer)
+- `GoRoomByNum` (Integer)
+- `GoPlayer` (Integer)
+- `GetPlayer` (Integer)
+
+#### **[Advertise]**
+- `File1` (String)
+- `Url1` (String)
+- `File2` (String)
+- `Url2` (String)
+
+#### **[Debug]**
+- `CanMoveInRoom` (Boolean)
+- `Heap` (Boolean)
+- `TransmittedBytes` (Boolean)
+- `Hash` (Boolean)
+- `InitProperties` (Boolean)
+- `InitLocals` (Boolean)
+- `Uninitialized` (Boolean)
+
+#### **[Security]**
+- `LogSpoofs` (Boolean)
+- `HangupSpoofs` (Boolean)
+- `RedbookRsc` (String)
+
+#### **[Service]**
+- `Enabled` (Boolean)
+- `Machine` (String)
+- `Directory` (String)
+- `Username` (String)
+- `Password` (String)
+
+#### **[Blakod]**
+- `MaxStatements` (Integer)
+
 ### Common Development Questions (FAQ)
 
 #### What are the "warnings" regarding "externals" when first using the "make" command to compile the server?
