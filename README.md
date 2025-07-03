@@ -1208,3 +1208,14 @@ Example error
   - One of the type field values is the special type NIL (abbreviated as "$").
   - When the type field is NIL, the number field is ignored, although traditionally it is set to 0 to make debugging easier ("why is the number field 23462?  Oh, the type is NIL, so never mind").
   - What you are seeing in the output is the combination of the NIL type value "$" and the number value 0.
+
+#### Help - I submitted a PR but now there's a bunch of files showing changes and I can't undo them
+- Sometimes the diff within the PR will show changes on a file even though nothing is visible
+  - This can happen with encoding changes or end of line returns, for example
+- To avoid constantly submitting commits to "undo" your diff, you can revert a file to a commit from before your PR
+- Example: 
+  - Find a commit from before your change on master and reference the file you want to revert
+    - `git checkout <commit hash> -- kod/object/active/holder/nomoveon/battler/player/user.kod`
+  - You will now see the change in staging within VS code, commit that change to reviert
+     - `git commit -m "Revert user.kod to pre-PR #1176 state"`
+>>
