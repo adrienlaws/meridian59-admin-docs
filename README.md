@@ -1213,6 +1213,8 @@ Example error
 - Sometimes the diff within the PR will show changes on a file even though nothing is visible
   - This can happen with encoding changes or end of line returns, for example
 - To avoid constantly submitting commits to "undo" your diff, you can revert a file to a commit from before your PR
+> [!WARNING]
+> Use at your own risk.  If you revert a file it will undo all changes in that file.
 - Example: 
   - Find a commit from before your change on master and reference the file you want to revert
     - `git checkout <commit hash> -- kod/object/active/holder/nomoveon/battler/player/user.kod`
