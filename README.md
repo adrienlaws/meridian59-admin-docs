@@ -624,6 +624,9 @@ Single Skills:\
 
 Single Spells:\
 `send object <playerobject#> adminsetspell num int <spell#> ability int <%ofspell> List here`
+Example:
+> `send o 6846 adminsetspell num int SID_MANA_FOCUS ability int 50`
+
 
 Give Player Defined Weaponcraft Skills at certain level and %:\
 `send object <playerobj#> giveplayerallskills level int <maxlevel> iability int <%>`
