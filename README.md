@@ -1097,6 +1097,27 @@ Make sure you are using Windows 1252 as your encoding.  Visual Studio Code will 
 #### Is Blakod case sensitive? (for example @GetOwner vs @getowner)
 Blakod is case insensitive.  However the codebase uses `PascalCase` or  `UpperCamelCase` to capitalize function words.
 
+### How do I save my temporary work when switching branches or making changes to my fork?
+
+- 1. Save your uncommitted changes to a stash
+`git stash push -m "my temporary work"`
+
+- 2. Reset master to upstream
+```
+git fetch upstream
+git reset --hard upstream/master
+git push origin master --force
+```
+
+- 3. Restore your uncommitted changes
+`git stash pop`
+
+If you want to see what's in your stash before popping:
+```
+git stash list          # shows all stashes
+git stash show -p       # shows diff of most recent stash
+```
+
 ### My PR was merged but now everytime I submit a new one there are extra commits
 - This is related to forking a repository and then clicking on the `sync changes`.
 - If you submit commits A,B,C as part of your Pull Request (PR) then when it is merged typically the originating repo will squash the commits into one commit (commit D for example).
