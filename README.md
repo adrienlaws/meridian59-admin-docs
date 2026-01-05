@@ -522,6 +522,11 @@ cursed | cursed weapon
 purger| purge
 glowing | glow
 
+### Remove Item Attributes
+Example of removing the `WA_SPELLCASTER` item attribute from an item\
+`send o <weapon object id> removeattribute Itematt int 68`\
+68 = WA_SPELLCASTER  in `blakston.khd`
+
 ### Color Items
 To change an item's color
 - select the item through the administrator console (as you did to set piHits and piHits_init)\
