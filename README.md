@@ -1275,7 +1275,7 @@ By default, VS Code terminals don't have access to Visual Studio build tools lik
 6. Select "Developer Command Prompt"
 7. You can now run `nmake` in that terminal
 
-## Visual Studio Path Variations
+##### Visual Studio Path Variations
 
 Update the path if your Visual Studio installation differs:
 
@@ -1285,7 +1285,7 @@ Update the path if your Visual Studio installation differs:
 | VS 2022 Professional | `C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\VsDevCmd.bat` |
 | VS 2019 Community | `C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat` |
 
-## Warning
+##### Warning
 
 **Do not** set this as your default terminal using `terminal.integrated.defaultProfile.windows`. If the path is wrong or Visual Studio isn't installed, no terminals will open at all.
 
