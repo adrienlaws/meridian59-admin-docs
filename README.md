@@ -1138,10 +1138,10 @@ reset the branch to match the upstream branch
 	- `git reset --hard upstream/<branch name>`
 	- example
 		- `git reset --hard upstream/master`
-- soft reset: move your branch commit to same commmit as the upstream branch, but leave your changes stahged for commit
-	- `git reset --soft upstream/<branch name>`
+- soft reset: move your branch commit to same commmit as the upstream branch, but leave your changes staged for commit
+	- `git reset --soft upstream/master`
 - mixed reset: default behavior and will move your branch pointer to the same commit as the upstream branch and your changes will be unstaged
-	- `git reset upstream/<branch name>`
+	- `git reset upstream/master`
 
 I recommend a hard reset to your fork when working on Meridian when you have no local changes you want to keep
 
