@@ -129,6 +129,16 @@ Solution
 - Treasure type objects are created once and stored, so you also need to recreate them: 
 `send object 0 RecreateAllTreasureTypes` from admin mode
 
+> The server won't start or shows hundreds of errors like "LoadKodbaseClass can't find class id" or "SetResourceName can't find resource id" when I start blakserv.exe
+
+Solution - Clean your dev environment compiled files
+- Navigate to `run/server/`
+- Delete the `memmap` and `rsc` directories (leave .gitignore)
+- From the repo root, run `nmake clean && nmake`
+- Start the server again with `blakserv.exe`
+
+These directories contain compiled Blakod files and resource mappings. If they become stale or corrupted from a previous failed build, the server fails to load the kodbase. Deleting them forces a fresh rebuild.
+
 ### Create Lighting
 |Command|Graphic|Description
 |:-|:-:|:-|
@@ -1102,6 +1112,15 @@ Make sure you are using Windows 1252 as your encoding.  Visual Studio Code will 
 #### Is Blakod case sensitive? (for example @GetOwner vs @getowner)
 Blakod is case insensitive.  However the codebase uses `PascalCase` or  `UpperCamelCase` to capitalize function words.
 
+#### What is the difference between "Blakod" and "the Blakod"?
+From the original authors of Meridian 59:
+- `Blakod` is the name of the language itself ("write it in Blakod").
+- `the Blakod` refers to the collection of game code files written in Blakod (the `.kod` sources under the `kod/` directory), as distinct from the server code or client code.
+
+So "the Blakod server" would be wrong; it is just "the server" (the executable is `blakserv`).  But "a bug in the Blakod" or "rebuild the Blakod" is correct when you mean the game scripts.
+
+Note that `.kod` is just the file extension (short for "Blakod").  The compiled form is `.bof`, and the merged resource bundle is `.rsb`.
+
 ### How do I save my temporary work when switching branches or making changes to my fork?
 
 - 1. Save your uncommitted changes to a stash
@@ -1249,6 +1268,73 @@ Example error
     - `git checkout <commit hash> -- kod/object/active/holder/nomoveon/battler/player/user.kod`
   - You will now see the change in staging within VS code, commit that change to reviert
      - `git commit -m "Revert user.kod to pre-PR #1176 state"`
+
+#### How do I hide locally modified files like `motd.txt` or `config.ini` from git status?
+
+When setting up a local development environment, a few files need to be edited to run the game (server address, credentials, server message of the day, etc.) but those local changes should never be committed. The fix depends on whether git is already tracking the file.
+
+First, check if a file is tracked:
+```
+git ls-files <filename>
+```
+If it prints the filename, it's tracked. If there's no output, it's untracked.
+
+> [!NOTE]
+> Most of the `run\` directory is already covered by `.gitignore` (rule: `run/*`). Build outputs like compiled `.exe` files, `.bgf` graphics, and `.ogg` audio in `run\localclient\resource\` are all automatically ignored. You do not need to do anything for those.
+
+##### Quick reference: the three files you will likely need to handle
+
+Run these three commands once after cloning and you're set:
+
+```
+git update-index --skip-worktree run\localclient\meridian.ini
+git update-index --skip-worktree run\server\motd.txt
+echo config.ini >> .git\info\exclude
+```
+
+Why each one is different is explained below.
+
+##### Tracked files with local edits (`meridian.ini`, `motd.txt`)
+
+`run\localclient\meridian.ini` and `run\server\motd.txt` are intentionally tracked in the repo (they serve as default templates). But you need to edit them locally to connect to your own server. Git will keep flagging them as modified.
+
+Use `skip-worktree` to tell git to stop watching your local changes on a tracked file:
+
+```
+git update-index --skip-worktree run\localclient\meridian.ini
+git update-index --skip-worktree run\server\motd.txt
+```
+
+After running this, the files disappear from `git status` and `git diff`, even though your local edits are still there.
+
+To check which files you have marked this way:
+```
+git ls-files -v | findstr "^S"
+```
+Files marked with `S` at the start of the line are skip-worktree files.
+
+To undo it later (for example if you need to commit an actual template change):
+```
+git update-index --no-skip-worktree run\localclient\meridian.ini
+```
+
+> [!WARNING]
+> If someone else changes one of these files upstream and you pull, git may warn you about a conflict. Undo the skip-worktree flag, resolve the conflict, then re-apply it.
+
+##### Untracked files (`config.ini`)
+
+`config.ini` in the repo root is not tracked by git at all. It shows up as "U" (Untracked) in VS Code's Source Control panel. Untracked is NOT the same as ignored -- if you accidentally click "Stage All Changes", git could pick it up and commit it.
+
+Add it to your local exclude file so git treats it as ignored ("I") instead of untracked ("U"):
+
+```
+echo config.ini >> .git\info\exclude
+```
+
+`.git\info\exclude` works exactly like `.gitignore` but is local to your machine only and is never committed or shared. The file disappears from the Source Control panel immediately.
+
+> [!NOTE]
+> Both `skip-worktree` and `.git\info\exclude` are local to your machine. They do not affect other contributors and you will need to re-run these commands if you clone the repository again.
 
 #### How do I build Meridian 59 directly in VS Code without opening a separate terminal?
 
