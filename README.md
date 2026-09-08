@@ -1142,6 +1142,51 @@ git stash list          # shows all stashes
 git stash show -p       # shows diff of most recent stash
 ```
 
+#### A safer path if you have local changes you want to keep
+
+The steps above use `git reset --hard`, which discards every uncommitted change to
+a tracked file, not only the ones you meant to drop.  If you run a local server you
+probably have edits you need, for example a `MaintenancePort` line added to
+`run/server/blakserv.cfg`.  A hard reset removes them without asking.
+
+The force push is usually unnecessary too.  It exists to overwrite diverged
+history, and a fork you only use as a mirror has not diverged.  Check before
+assuming you need it:
+
+```
+git fetch upstream
+git log --oneline upstream/master..master
+```
+
+If that prints nothing, your master has no commits of its own and this is enough:
+
+```
+git merge --ff-only upstream/master
+git push origin master
+```
+
+`--ff-only` is the safety.  It refuses to run if the histories have diverged
+instead of quietly making a merge commit, so a refusal is useful information
+rather than a failure.  It also leaves your working tree alone, so local edits
+survive the update.
+
+If you have a file you always keep modified and never intend to commit, tell git
+to stop watching your copy of it:
+
+```
+git update-index --skip-worktree run/server/blakserv.cfg
+```
+
+It stops appearing in `git status` and cannot be staged by accident.  To start
+tracking your changes again:
+
+```
+git update-index --no-skip-worktree run/server/blakserv.cfg
+```
+
+This is worth doing for anything under `run/`, which holds one developer's local
+server environment rather than project configuration.
+
 ### My PR was merged but now everytime I submit a new one there are extra commits
 - This is related to forking a repository and then clicking on the `sync changes`.
 - If you submit commits A,B,C as part of your Pull Request (PR) then when it is merged typically the originating repo will squash the commits into one commit (commit D for example).
