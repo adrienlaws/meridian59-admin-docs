@@ -1235,7 +1235,7 @@ This is extermely helpful when you want to see what happens when a function/mess
 #### What's the procedure for PRs to add a resource (example: a .wav file)?
 - Add the new resource into the `resource\audio\wav` directory
 - Historically builders have had to remember which files are new at each update, which is error-prone
-  - suggested improvmenet: also add a makefile to that directory that copies the wav files into the `run\localclient\resource` directory
+  - suggested improvement: also add a makefile to that directory that copies the wav files into the `run\localclient\resource` directory
 
 #### None of my NPC talk on my local server - how do I fix this?
 - read in the appropriate admin commands through the administrator console on the server
