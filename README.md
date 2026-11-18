@@ -1250,6 +1250,43 @@ The `5501` or `waspellt` (not to be confused with `waspell`) item attribute is (
 For example to see if a weapon with itematt 5501 (revealed unholy weapon) is actually in effect check if `piAttack_spell` is set to `INT 32` which is `ATCK_SPELL_UNHOLY = 0x0020` as specified in blakston.khd.  This will tell you if the weapon is actually enchanted.
 
 
+#### How does a weapon attribute that casts a spell work?  For example the spellcaster in `waspell.kod`
+- There is one object for each kind of item attribute: one spellcaster, one paralyzer, one blinder, and so on
+  - `CreateAllItemAttsIfNew` in `system.kod` creates them once, when the world is first set up
+  - `send o 0 FindItemAttByNum num int 68` returns the spellcaster object
+  - Every weapon with that attribute points to the same object
+- The weapon carries its own data for the attribute
+  - When the attribute is added, `AddToItem` builds an entry such as `[compound, spell, power]` and stores it in the weapon's `plItem_Attributes` list
+  - For the spellcaster, the spell is picked once at that moment and never changes on that weapon
+- On every hit, `GetDamage` in `weapon.kod` calls `ModifyDamage` on each weapon attribute and passes it the weapon's own entry
+  - The spellcaster reads the spell and power from that entry and casts on 4 to 7 hits in 100
+  - It casts only for a wielder with `PFLAG_PKILL_ENABLE`, the flag a player gets past 30 base health, on joining a guild, or as a murderer or outlaw.  It is not the safety setting, `PFLAG_SAFETY`
+- Single-spell attributes such as the paralyzer (`waparal.kod`) and blinder (`wablindr.kod`) always cast the same spell, at a fixed power and a 15 in 100 chance, with no `PFLAG_PKILL_ENABLE` check
+- How the attribute gets onto a dropped weapon
+  - Each attribute has a difficulty, `viDifficulty`.  `AddToTreasureTable` in `itematt.kod` enters it at that difficulty with weight 50.  It also enters it one above and one below, with weight 10
+  - When a monster dies, its treasure type may call `GenerateItemAtt` in `trestype.kod`.  The chance is `random(1,400)` against the magic item setting times the treasure type's `piItem_Att_chance`
+  - `GenerateItemAtt` moves the treasure type's `piDiff_seed` up or down by a random bonus, picks an attribute by weight at that difficulty, and asks it for a new item
+  - `GenerateItemWithAttribute` reads the killer's base max health.  Called with no killer, it returns `$`
+- An admin can add the attribute to the weapon they wield: `dm create itematt spellcaster vertigo`
+  - The spellcaster refuses a spell that is not in its list
+
+#### Should a fixed list live in a property set by the Constructor, or in a function that returns it?
+- The two patterns
+  - Property: the class lists `plSpells = $` under `properties:`.  `Constructor()` fills it.  Code reads `plSpells`
+  - Function: a message returns the list, for example `GetResistanceModifiers()` in `chain.kod` returns `[ [ATCK_WEAP_THRUST,5], ... ]`.  Code calls the message
+- Property set by the Constructor
+  - Pros: the list is built once.  Each object can hold its own list.  `show object` and `show list` show the stored value
+  - Cons: the Constructor runs once, when the object is created.  The value is saved with the game.  A code update does not change an object that already exists
+  - Cons: for a long-lived object such as an item attribute, a changed list needs `send o 0 RecreateAllItemAttributes`, `recreate automated` with nobody online, or a new world
+  - Cons: removing the property from the kod later writes one error line on the first load of an old save: `LoadGameObject object N class ... property ... can't set object property`.  The loader's own comment says this is usual for a removed property
+- Function that returns the list
+  - Pros: the code holds the only copy.  Loading new kod changes the list for every object.  Nothing is saved
+  - Cons: each call builds a new list, a small cost.  Every object of the class gets the same list.  An admin cannot change it at runtime
+- Rule of thumb
+  - Data that should follow the code, such as a table of choices, belongs in a function
+  - Data that differs per object or changes during play belongs in a property
+- Example: the spellcaster's spell list moved from a Constructor property to `GetSpellChances()` so that a fix to the list reaches running servers
+
 #### I added a new class / .kod file and removed it, now I can't build, what do I do?
 🚧this question is still being worked on
 check the source file /kod/kodbase.txt and remove the new class you created.
